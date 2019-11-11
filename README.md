@@ -41,7 +41,7 @@ If you are using Maven without Bom, Add this to your dependencies.
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-dlp</artifactId>
-  <version>0.116.1-beta</version>
+  <version>0.116.0-beta</version>
 </dependency>
 ```
 If you are using Gradle, add this to your dependencies
