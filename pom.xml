@@ -4,7 +4,7 @@
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-dlp-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.1.1-SNAPSHOT</version><!-- {x-version-update:google-cloud-dlp:current} -->
+  <version>1.0.2-SNAPSHOT</version><!-- {x-version-update:google-cloud-dlp:current} -->
   <name>Google Cloud DLP Parent</name>
   <url>https://github.com/googleapis/java-dlp</url>
   <description>
@@ -64,7 +64,7 @@
     <github.global.server>github</github.global.server>
     <site.installationModule>google-cloud-dlp-parent</site.installationModule>
     <google.core.version>1.93.0</google.core.version>
-    <google.api-common.version>1.9.0</google.api-common.version>
+    <google.api-common.version>1.8.1</google.api-common.version>
     <google.common-protos.version>1.17.0</google.common-protos.version>
     <gax.version>1.54.0</gax.version>
     <grpc.version>1.27.2</grpc.version>
@@ -81,17 +81,17 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-dlp-v2</artifactId>
-        <version>1.1.1-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-dlp-v2:current} -->
+        <version>1.0.2-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-dlp-v2:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-dlp-v2</artifactId>
-        <version>1.1.1-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-dlp-v2:current} -->
+        <version>1.0.2-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-dlp-v2:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-dlp</artifactId>
-        <version>1.1.1-SNAPSHOT</version><!-- {x-version-update:google-cloud-dlp:current} -->
+        <version>1.0.2-SNAPSHOT</version><!-- {x-version-update:google-cloud-dlp:current} -->
       </dependency>
 
       <dependency>
