@@ -146,15 +146,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
               .setResponseMarshaller(
                   ProtoUtils.marshaller(ListInfoTypesResponse.getDefaultInstance()))
               .build();
-  private static final MethodDescriptor<CreateInspectTemplateRequest, InspectTemplate>
-      createInspectTemplateMethodDescriptor =
-          MethodDescriptor.<CreateInspectTemplateRequest, InspectTemplate>newBuilder()
-              .setType(MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName("google.privacy.dlp.v2.DlpService/CreateInspectTemplate")
-              .setRequestMarshaller(
-                  ProtoUtils.marshaller(CreateInspectTemplateRequest.getDefaultInstance()))
-              .setResponseMarshaller(ProtoUtils.marshaller(InspectTemplate.getDefaultInstance()))
-              .build();
   private static final MethodDescriptor<UpdateInspectTemplateRequest, InspectTemplate>
       updateInspectTemplateMethodDescriptor =
           MethodDescriptor.<UpdateInspectTemplateRequest, InspectTemplate>newBuilder()
@@ -240,13 +231,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
                   ProtoUtils.marshaller(DeleteDeidentifyTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
               .build();
-  private static final MethodDescriptor<CreateDlpJobRequest, DlpJob> createDlpJobMethodDescriptor =
-      MethodDescriptor.<CreateDlpJobRequest, DlpJob>newBuilder()
-          .setType(MethodDescriptor.MethodType.UNARY)
-          .setFullMethodName("google.privacy.dlp.v2.DlpService/CreateDlpJob")
-          .setRequestMarshaller(ProtoUtils.marshaller(CreateDlpJobRequest.getDefaultInstance()))
-          .setResponseMarshaller(ProtoUtils.marshaller(DlpJob.getDefaultInstance()))
-          .build();
   private static final MethodDescriptor<ListDlpJobsRequest, ListDlpJobsResponse>
       listDlpJobsMethodDescriptor =
           MethodDescriptor.<ListDlpJobsRequest, ListDlpJobsResponse>newBuilder()
@@ -396,6 +380,22 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
                   ProtoUtils.marshaller(DeleteStoredInfoTypeRequest.getDefaultInstance()))
               .setResponseMarshaller(ProtoUtils.marshaller(Empty.getDefaultInstance()))
               .build();
+  private static final MethodDescriptor<CreateInspectTemplateRequest, InspectTemplate>
+      createInspectTemplateMethodDescriptor =
+          MethodDescriptor.<CreateInspectTemplateRequest, InspectTemplate>newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName("google.privacy.dlp.v2.DlpService/CreateInspectTemplate")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(CreateInspectTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(ProtoUtils.marshaller(InspectTemplate.getDefaultInstance()))
+              .build();
+  private static final MethodDescriptor<CreateDlpJobRequest, DlpJob> createDlpJobMethodDescriptor =
+      MethodDescriptor.<CreateDlpJobRequest, DlpJob>newBuilder()
+          .setType(MethodDescriptor.MethodType.UNARY)
+          .setFullMethodName("google.privacy.dlp.v2.DlpService/CreateDlpJob")
+          .setRequestMarshaller(ProtoUtils.marshaller(CreateDlpJobRequest.getDefaultInstance()))
+          .setResponseMarshaller(ProtoUtils.marshaller(DlpJob.getDefaultInstance()))
+          .build();
 
   private final BackgroundResource backgroundResources;
 
@@ -406,8 +406,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
   private final UnaryCallable<ReidentifyContentRequest, ReidentifyContentResponse>
       reidentifyContentCallable;
   private final UnaryCallable<ListInfoTypesRequest, ListInfoTypesResponse> listInfoTypesCallable;
-  private final UnaryCallable<CreateInspectTemplateRequest, InspectTemplate>
-      createInspectTemplateCallable;
   private final UnaryCallable<UpdateInspectTemplateRequest, InspectTemplate>
       updateInspectTemplateCallable;
   private final UnaryCallable<GetInspectTemplateRequest, InspectTemplate>
@@ -429,7 +427,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
       listDeidentifyTemplatesPagedCallable;
   private final UnaryCallable<DeleteDeidentifyTemplateRequest, Empty>
       deleteDeidentifyTemplateCallable;
-  private final UnaryCallable<CreateDlpJobRequest, DlpJob> createDlpJobCallable;
   private final UnaryCallable<ListDlpJobsRequest, ListDlpJobsResponse> listDlpJobsCallable;
   private final UnaryCallable<ListDlpJobsRequest, ListDlpJobsPagedResponse>
       listDlpJobsPagedCallable;
@@ -459,6 +456,9 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
   private final UnaryCallable<ListStoredInfoTypesRequest, ListStoredInfoTypesPagedResponse>
       listStoredInfoTypesPagedCallable;
   private final UnaryCallable<DeleteStoredInfoTypeRequest, Empty> deleteStoredInfoTypeCallable;
+  private final UnaryCallable<CreateInspectTemplateRequest, InspectTemplate>
+      createInspectTemplateCallable;
+  private final UnaryCallable<CreateDlpJobRequest, DlpJob> createDlpJobCallable;
 
   private final GrpcStubCallableFactory callableFactory;
 
@@ -567,20 +567,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
                   }
                 })
             .build();
-    GrpcCallSettings<CreateInspectTemplateRequest, InspectTemplate>
-        createInspectTemplateTransportSettings =
-            GrpcCallSettings.<CreateInspectTemplateRequest, InspectTemplate>newBuilder()
-                .setMethodDescriptor(createInspectTemplateMethodDescriptor)
-                .setParamsExtractor(
-                    new RequestParamsExtractor<CreateInspectTemplateRequest>() {
-                      @Override
-                      public Map<String, String> extract(CreateInspectTemplateRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("parent", String.valueOf(request.getParent()));
-                        return params.build();
-                      }
-                    })
-                .build();
     GrpcCallSettings<UpdateInspectTemplateRequest, InspectTemplate>
         updateInspectTemplateTransportSettings =
             GrpcCallSettings.<UpdateInspectTemplateRequest, InspectTemplate>newBuilder()
@@ -707,19 +693,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
                       }
                     })
                 .build();
-    GrpcCallSettings<CreateDlpJobRequest, DlpJob> createDlpJobTransportSettings =
-        GrpcCallSettings.<CreateDlpJobRequest, DlpJob>newBuilder()
-            .setMethodDescriptor(createDlpJobMethodDescriptor)
-            .setParamsExtractor(
-                new RequestParamsExtractor<CreateDlpJobRequest>() {
-                  @Override
-                  public Map<String, String> extract(CreateDlpJobRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("parent", String.valueOf(request.getParent()));
-                    return params.build();
-                  }
-                })
-            .build();
     GrpcCallSettings<ListDlpJobsRequest, ListDlpJobsResponse> listDlpJobsTransportSettings =
         GrpcCallSettings.<ListDlpJobsRequest, ListDlpJobsResponse>newBuilder()
             .setMethodDescriptor(listDlpJobsMethodDescriptor)
@@ -947,6 +920,33 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
                   }
                 })
             .build();
+    GrpcCallSettings<CreateInspectTemplateRequest, InspectTemplate>
+        createInspectTemplateTransportSettings =
+            GrpcCallSettings.<CreateInspectTemplateRequest, InspectTemplate>newBuilder()
+                .setMethodDescriptor(createInspectTemplateMethodDescriptor)
+                .setParamsExtractor(
+                    new RequestParamsExtractor<CreateInspectTemplateRequest>() {
+                      @Override
+                      public Map<String, String> extract(CreateInspectTemplateRequest request) {
+                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("parent", String.valueOf(request.getParent()));
+                        return params.build();
+                      }
+                    })
+                .build();
+    GrpcCallSettings<CreateDlpJobRequest, DlpJob> createDlpJobTransportSettings =
+        GrpcCallSettings.<CreateDlpJobRequest, DlpJob>newBuilder()
+            .setMethodDescriptor(createDlpJobMethodDescriptor)
+            .setParamsExtractor(
+                new RequestParamsExtractor<CreateDlpJobRequest>() {
+                  @Override
+                  public Map<String, String> extract(CreateDlpJobRequest request) {
+                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("parent", String.valueOf(request.getParent()));
+                    return params.build();
+                  }
+                })
+            .build();
 
     this.inspectContentCallable =
         callableFactory.createUnaryCallable(
@@ -967,11 +967,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
     this.listInfoTypesCallable =
         callableFactory.createUnaryCallable(
             listInfoTypesTransportSettings, settings.listInfoTypesSettings(), clientContext);
-    this.createInspectTemplateCallable =
-        callableFactory.createUnaryCallable(
-            createInspectTemplateTransportSettings,
-            settings.createInspectTemplateSettings(),
-            clientContext);
     this.updateInspectTemplateCallable =
         callableFactory.createUnaryCallable(
             updateInspectTemplateTransportSettings,
@@ -1027,9 +1022,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
             deleteDeidentifyTemplateTransportSettings,
             settings.deleteDeidentifyTemplateSettings(),
             clientContext);
-    this.createDlpJobCallable =
-        callableFactory.createUnaryCallable(
-            createDlpJobTransportSettings, settings.createDlpJobSettings(), clientContext);
     this.listDlpJobsCallable =
         callableFactory.createUnaryCallable(
             listDlpJobsTransportSettings, settings.listDlpJobsSettings(), clientContext);
@@ -1106,6 +1098,14 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
             deleteStoredInfoTypeTransportSettings,
             settings.deleteStoredInfoTypeSettings(),
             clientContext);
+    this.createInspectTemplateCallable =
+        callableFactory.createUnaryCallable(
+            createInspectTemplateTransportSettings,
+            settings.createInspectTemplateSettings(),
+            clientContext);
+    this.createDlpJobCallable =
+        callableFactory.createUnaryCallable(
+            createDlpJobTransportSettings, settings.createDlpJobSettings(), clientContext);
 
     backgroundResources = new BackgroundResourceAggregation(clientContext.getBackgroundResources());
   }
@@ -1130,11 +1130,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
 
   public UnaryCallable<ListInfoTypesRequest, ListInfoTypesResponse> listInfoTypesCallable() {
     return listInfoTypesCallable;
-  }
-
-  public UnaryCallable<CreateInspectTemplateRequest, InspectTemplate>
-      createInspectTemplateCallable() {
-    return createInspectTemplateCallable;
   }
 
   public UnaryCallable<UpdateInspectTemplateRequest, InspectTemplate>
@@ -1187,10 +1182,6 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
 
   public UnaryCallable<DeleteDeidentifyTemplateRequest, Empty> deleteDeidentifyTemplateCallable() {
     return deleteDeidentifyTemplateCallable;
-  }
-
-  public UnaryCallable<CreateDlpJobRequest, DlpJob> createDlpJobCallable() {
-    return createDlpJobCallable;
   }
 
   public UnaryCallable<ListDlpJobsRequest, ListDlpJobsPagedResponse> listDlpJobsPagedCallable() {
@@ -1276,6 +1267,15 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
 
   public UnaryCallable<DeleteStoredInfoTypeRequest, Empty> deleteStoredInfoTypeCallable() {
     return deleteStoredInfoTypeCallable;
+  }
+
+  public UnaryCallable<CreateInspectTemplateRequest, InspectTemplate>
+      createInspectTemplateCallable() {
+    return createInspectTemplateCallable;
+  }
+
+  public UnaryCallable<CreateDlpJobRequest, DlpJob> createDlpJobCallable() {
+    return createDlpJobCallable;
   }
 
   @Override

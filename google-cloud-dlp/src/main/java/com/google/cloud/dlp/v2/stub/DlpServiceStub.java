@@ -108,11 +108,6 @@ public abstract class DlpServiceStub implements BackgroundResource {
     throw new UnsupportedOperationException("Not implemented: listInfoTypesCallable()");
   }
 
-  public UnaryCallable<CreateInspectTemplateRequest, InspectTemplate>
-      createInspectTemplateCallable() {
-    throw new UnsupportedOperationException("Not implemented: createInspectTemplateCallable()");
-  }
-
   public UnaryCallable<UpdateInspectTemplateRequest, InspectTemplate>
       updateInspectTemplateCallable() {
     throw new UnsupportedOperationException("Not implemented: updateInspectTemplateCallable()");
@@ -164,10 +159,6 @@ public abstract class DlpServiceStub implements BackgroundResource {
 
   public UnaryCallable<DeleteDeidentifyTemplateRequest, Empty> deleteDeidentifyTemplateCallable() {
     throw new UnsupportedOperationException("Not implemented: deleteDeidentifyTemplateCallable()");
-  }
-
-  public UnaryCallable<CreateDlpJobRequest, DlpJob> createDlpJobCallable() {
-    throw new UnsupportedOperationException("Not implemented: createDlpJobCallable()");
   }
 
   public UnaryCallable<ListDlpJobsRequest, ListDlpJobsPagedResponse> listDlpJobsPagedCallable() {
@@ -253,6 +244,15 @@ public abstract class DlpServiceStub implements BackgroundResource {
 
   public UnaryCallable<DeleteStoredInfoTypeRequest, Empty> deleteStoredInfoTypeCallable() {
     throw new UnsupportedOperationException("Not implemented: deleteStoredInfoTypeCallable()");
+  }
+
+  public UnaryCallable<CreateInspectTemplateRequest, InspectTemplate>
+      createInspectTemplateCallable() {
+    throw new UnsupportedOperationException("Not implemented: createInspectTemplateCallable()");
+  }
+
+  public UnaryCallable<CreateDlpJobRequest, DlpJob> createDlpJobCallable() {
+    throw new UnsupportedOperationException("Not implemented: createDlpJobCallable()");
   }
 
   @Override

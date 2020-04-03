@@ -117,16 +117,16 @@ import org.threeten.bp.Duration;
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
  * build() is called, the tree of builders is called to create the complete settings object.
  *
- * <p>For example, to set the total timeout of inspectContent to 30 seconds:
+ * <p>For example, to set the total timeout of listInfoTypes to 30 seconds:
  *
  * <pre>
  * <code>
  * DlpServiceStubSettings.Builder dlpServiceSettingsBuilder =
  *     DlpServiceStubSettings.newBuilder();
  * dlpServiceSettingsBuilder
- *     .inspectContentSettings()
+ *     .listInfoTypesSettings()
  *     .setRetrySettings(
- *         dlpServiceSettingsBuilder.inspectContentSettings().getRetrySettings().toBuilder()
+ *         dlpServiceSettingsBuilder.listInfoTypesSettings().getRetrySettings().toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * DlpServiceStubSettings dlpServiceSettings = dlpServiceSettingsBuilder.build();
@@ -149,8 +149,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
       reidentifyContentSettings;
   private final UnaryCallSettings<ListInfoTypesRequest, ListInfoTypesResponse>
       listInfoTypesSettings;
-  private final UnaryCallSettings<CreateInspectTemplateRequest, InspectTemplate>
-      createInspectTemplateSettings;
   private final UnaryCallSettings<UpdateInspectTemplateRequest, InspectTemplate>
       updateInspectTemplateSettings;
   private final UnaryCallSettings<GetInspectTemplateRequest, InspectTemplate>
@@ -175,7 +173,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
       listDeidentifyTemplatesSettings;
   private final UnaryCallSettings<DeleteDeidentifyTemplateRequest, Empty>
       deleteDeidentifyTemplateSettings;
-  private final UnaryCallSettings<CreateDlpJobRequest, DlpJob> createDlpJobSettings;
   private final PagedCallSettings<ListDlpJobsRequest, ListDlpJobsResponse, ListDlpJobsPagedResponse>
       listDlpJobsSettings;
   private final UnaryCallSettings<GetDlpJobRequest, DlpJob> getDlpJobSettings;
@@ -203,6 +200,9 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
           ListStoredInfoTypesRequest, ListStoredInfoTypesResponse, ListStoredInfoTypesPagedResponse>
       listStoredInfoTypesSettings;
   private final UnaryCallSettings<DeleteStoredInfoTypeRequest, Empty> deleteStoredInfoTypeSettings;
+  private final UnaryCallSettings<CreateInspectTemplateRequest, InspectTemplate>
+      createInspectTemplateSettings;
+  private final UnaryCallSettings<CreateDlpJobRequest, DlpJob> createDlpJobSettings;
 
   /** Returns the object with the settings used for calls to inspectContent. */
   public UnaryCallSettings<InspectContentRequest, InspectContentResponse> inspectContentSettings() {
@@ -229,12 +229,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
   /** Returns the object with the settings used for calls to listInfoTypes. */
   public UnaryCallSettings<ListInfoTypesRequest, ListInfoTypesResponse> listInfoTypesSettings() {
     return listInfoTypesSettings;
-  }
-
-  /** Returns the object with the settings used for calls to createInspectTemplate. */
-  public UnaryCallSettings<CreateInspectTemplateRequest, InspectTemplate>
-      createInspectTemplateSettings() {
-    return createInspectTemplateSettings;
   }
 
   /** Returns the object with the settings used for calls to updateInspectTemplate. */
@@ -294,11 +288,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
   public UnaryCallSettings<DeleteDeidentifyTemplateRequest, Empty>
       deleteDeidentifyTemplateSettings() {
     return deleteDeidentifyTemplateSettings;
-  }
-
-  /** Returns the object with the settings used for calls to createDlpJob. */
-  public UnaryCallSettings<CreateDlpJobRequest, DlpJob> createDlpJobSettings() {
-    return createDlpJobSettings;
   }
 
   /** Returns the object with the settings used for calls to listDlpJobs. */
@@ -395,6 +384,17 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
     return deleteStoredInfoTypeSettings;
   }
 
+  /** Returns the object with the settings used for calls to createInspectTemplate. */
+  public UnaryCallSettings<CreateInspectTemplateRequest, InspectTemplate>
+      createInspectTemplateSettings() {
+    return createInspectTemplateSettings;
+  }
+
+  /** Returns the object with the settings used for calls to createDlpJob. */
+  public UnaryCallSettings<CreateDlpJobRequest, DlpJob> createDlpJobSettings() {
+    return createDlpJobSettings;
+  }
+
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public DlpServiceStub createStub() throws IOException {
     if (getTransportChannelProvider()
@@ -469,7 +469,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
     deidentifyContentSettings = settingsBuilder.deidentifyContentSettings().build();
     reidentifyContentSettings = settingsBuilder.reidentifyContentSettings().build();
     listInfoTypesSettings = settingsBuilder.listInfoTypesSettings().build();
-    createInspectTemplateSettings = settingsBuilder.createInspectTemplateSettings().build();
     updateInspectTemplateSettings = settingsBuilder.updateInspectTemplateSettings().build();
     getInspectTemplateSettings = settingsBuilder.getInspectTemplateSettings().build();
     listInspectTemplatesSettings = settingsBuilder.listInspectTemplatesSettings().build();
@@ -479,7 +478,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
     getDeidentifyTemplateSettings = settingsBuilder.getDeidentifyTemplateSettings().build();
     listDeidentifyTemplatesSettings = settingsBuilder.listDeidentifyTemplatesSettings().build();
     deleteDeidentifyTemplateSettings = settingsBuilder.deleteDeidentifyTemplateSettings().build();
-    createDlpJobSettings = settingsBuilder.createDlpJobSettings().build();
     listDlpJobsSettings = settingsBuilder.listDlpJobsSettings().build();
     getDlpJobSettings = settingsBuilder.getDlpJobSettings().build();
     deleteDlpJobSettings = settingsBuilder.deleteDlpJobSettings().build();
@@ -497,6 +495,8 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
     getStoredInfoTypeSettings = settingsBuilder.getStoredInfoTypeSettings().build();
     listStoredInfoTypesSettings = settingsBuilder.listStoredInfoTypesSettings().build();
     deleteStoredInfoTypeSettings = settingsBuilder.deleteStoredInfoTypeSettings().build();
+    createInspectTemplateSettings = settingsBuilder.createInspectTemplateSettings().build();
+    createDlpJobSettings = settingsBuilder.createDlpJobSettings().build();
   }
 
   private static final PagedListDescriptor<
@@ -820,8 +820,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
         reidentifyContentSettings;
     private final UnaryCallSettings.Builder<ListInfoTypesRequest, ListInfoTypesResponse>
         listInfoTypesSettings;
-    private final UnaryCallSettings.Builder<CreateInspectTemplateRequest, InspectTemplate>
-        createInspectTemplateSettings;
     private final UnaryCallSettings.Builder<UpdateInspectTemplateRequest, InspectTemplate>
         updateInspectTemplateSettings;
     private final UnaryCallSettings.Builder<GetInspectTemplateRequest, InspectTemplate>
@@ -846,7 +844,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
         listDeidentifyTemplatesSettings;
     private final UnaryCallSettings.Builder<DeleteDeidentifyTemplateRequest, Empty>
         deleteDeidentifyTemplateSettings;
-    private final UnaryCallSettings.Builder<CreateDlpJobRequest, DlpJob> createDlpJobSettings;
     private final PagedCallSettings.Builder<
             ListDlpJobsRequest, ListDlpJobsResponse, ListDlpJobsPagedResponse>
         listDlpJobsSettings;
@@ -881,6 +878,9 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
         listStoredInfoTypesSettings;
     private final UnaryCallSettings.Builder<DeleteStoredInfoTypeRequest, Empty>
         deleteStoredInfoTypeSettings;
+    private final UnaryCallSettings.Builder<CreateInspectTemplateRequest, InspectTemplate>
+        createInspectTemplateSettings;
+    private final UnaryCallSettings.Builder<CreateDlpJobRequest, DlpJob> createDlpJobSettings;
 
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
@@ -933,8 +933,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
       listInfoTypesSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
-      createInspectTemplateSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
       updateInspectTemplateSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       getInspectTemplateSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
@@ -954,8 +952,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
           PagedCallSettings.newBuilder(LIST_DEIDENTIFY_TEMPLATES_PAGE_STR_FACT);
 
       deleteDeidentifyTemplateSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
-
-      createDlpJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       listDlpJobsSettings = PagedCallSettings.newBuilder(LIST_DLP_JOBS_PAGE_STR_FACT);
 
@@ -992,6 +988,10 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
       deleteStoredInfoTypeSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
+      createInspectTemplateSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
+      createDlpJobSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
               inspectContentSettings,
@@ -999,7 +999,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
               deidentifyContentSettings,
               reidentifyContentSettings,
               listInfoTypesSettings,
-              createInspectTemplateSettings,
               updateInspectTemplateSettings,
               getInspectTemplateSettings,
               listInspectTemplatesSettings,
@@ -1009,7 +1008,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
               getDeidentifyTemplateSettings,
               listDeidentifyTemplatesSettings,
               deleteDeidentifyTemplateSettings,
-              createDlpJobSettings,
               listDlpJobsSettings,
               getDlpJobSettings,
               deleteDlpJobSettings,
@@ -1026,7 +1024,9 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
               updateStoredInfoTypeSettings,
               getStoredInfoTypeSettings,
               listStoredInfoTypesSettings,
-              deleteStoredInfoTypeSettings);
+              deleteStoredInfoTypeSettings,
+              createInspectTemplateSettings,
+              createDlpJobSettings);
 
       initDefaults(this);
     }
@@ -1044,32 +1044,27 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
       builder
           .inspectContentSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
           .redactImageSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
           .deidentifyContentSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
           .reidentifyContentSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
           .listInfoTypesSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .createInspectTemplateSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
@@ -1089,7 +1084,7 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
       builder
           .deleteInspectTemplateSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
@@ -1114,11 +1109,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
       builder
           .deleteDeidentifyTemplateSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
-          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
-
-      builder
-          .createDlpJobSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
@@ -1134,7 +1124,7 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
       builder
           .deleteDlpJobSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
@@ -1164,7 +1154,7 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
       builder
           .deleteJobTriggerSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       builder
@@ -1204,7 +1194,17 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
       builder
           .deleteStoredInfoTypeSettings()
-          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("idempotent"))
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
+      builder
+          .createInspectTemplateSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
+
+      builder
+          .createDlpJobSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("non_idempotent"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("default"));
 
       return builder;
@@ -1218,7 +1218,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
       deidentifyContentSettings = settings.deidentifyContentSettings.toBuilder();
       reidentifyContentSettings = settings.reidentifyContentSettings.toBuilder();
       listInfoTypesSettings = settings.listInfoTypesSettings.toBuilder();
-      createInspectTemplateSettings = settings.createInspectTemplateSettings.toBuilder();
       updateInspectTemplateSettings = settings.updateInspectTemplateSettings.toBuilder();
       getInspectTemplateSettings = settings.getInspectTemplateSettings.toBuilder();
       listInspectTemplatesSettings = settings.listInspectTemplatesSettings.toBuilder();
@@ -1228,7 +1227,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
       getDeidentifyTemplateSettings = settings.getDeidentifyTemplateSettings.toBuilder();
       listDeidentifyTemplatesSettings = settings.listDeidentifyTemplatesSettings.toBuilder();
       deleteDeidentifyTemplateSettings = settings.deleteDeidentifyTemplateSettings.toBuilder();
-      createDlpJobSettings = settings.createDlpJobSettings.toBuilder();
       listDlpJobsSettings = settings.listDlpJobsSettings.toBuilder();
       getDlpJobSettings = settings.getDlpJobSettings.toBuilder();
       deleteDlpJobSettings = settings.deleteDlpJobSettings.toBuilder();
@@ -1246,6 +1244,8 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
       getStoredInfoTypeSettings = settings.getStoredInfoTypeSettings.toBuilder();
       listStoredInfoTypesSettings = settings.listStoredInfoTypesSettings.toBuilder();
       deleteStoredInfoTypeSettings = settings.deleteStoredInfoTypeSettings.toBuilder();
+      createInspectTemplateSettings = settings.createInspectTemplateSettings.toBuilder();
+      createDlpJobSettings = settings.createDlpJobSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
@@ -1254,7 +1254,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
               deidentifyContentSettings,
               reidentifyContentSettings,
               listInfoTypesSettings,
-              createInspectTemplateSettings,
               updateInspectTemplateSettings,
               getInspectTemplateSettings,
               listInspectTemplatesSettings,
@@ -1264,7 +1263,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
               getDeidentifyTemplateSettings,
               listDeidentifyTemplatesSettings,
               deleteDeidentifyTemplateSettings,
-              createDlpJobSettings,
               listDlpJobsSettings,
               getDlpJobSettings,
               deleteDlpJobSettings,
@@ -1281,7 +1279,9 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
               updateStoredInfoTypeSettings,
               getStoredInfoTypeSettings,
               listStoredInfoTypesSettings,
-              deleteStoredInfoTypeSettings);
+              deleteStoredInfoTypeSettings,
+              createInspectTemplateSettings,
+              createDlpJobSettings);
     }
 
     // NEXT_MAJOR_VER: remove 'throws Exception'
@@ -1328,12 +1328,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
     public UnaryCallSettings.Builder<ListInfoTypesRequest, ListInfoTypesResponse>
         listInfoTypesSettings() {
       return listInfoTypesSettings;
-    }
-
-    /** Returns the builder for the settings used for calls to createInspectTemplate. */
-    public UnaryCallSettings.Builder<CreateInspectTemplateRequest, InspectTemplate>
-        createInspectTemplateSettings() {
-      return createInspectTemplateSettings;
     }
 
     /** Returns the builder for the settings used for calls to updateInspectTemplate. */
@@ -1394,11 +1388,6 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
     public UnaryCallSettings.Builder<DeleteDeidentifyTemplateRequest, Empty>
         deleteDeidentifyTemplateSettings() {
       return deleteDeidentifyTemplateSettings;
-    }
-
-    /** Returns the builder for the settings used for calls to createDlpJob. */
-    public UnaryCallSettings.Builder<CreateDlpJobRequest, DlpJob> createDlpJobSettings() {
-      return createDlpJobSettings;
     }
 
     /** Returns the builder for the settings used for calls to listDlpJobs. */
@@ -1500,6 +1489,17 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
     public UnaryCallSettings.Builder<DeleteStoredInfoTypeRequest, Empty>
         deleteStoredInfoTypeSettings() {
       return deleteStoredInfoTypeSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to createInspectTemplate. */
+    public UnaryCallSettings.Builder<CreateInspectTemplateRequest, InspectTemplate>
+        createInspectTemplateSettings() {
+      return createInspectTemplateSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to createDlpJob. */
+    public UnaryCallSettings.Builder<CreateDlpJobRequest, DlpJob> createDlpJobSettings() {
+      return createDlpJobSettings;
     }
 
     @Override
