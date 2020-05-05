@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.5](https://www.github.com/googleapis/java-dlp/compare/v1.1.4...v1.1.5) (2020-05-05)
+
+
+### Dependencies
+
+* update dependency com.google.api.grpc:proto-google-common-protos to v1.18.0 ([#173](https://www.github.com/googleapis/java-dlp/issues/173)) ([a1b65d4](https://www.github.com/googleapis/java-dlp/commit/a1b65d4fb390533ba5a92d03bfe482455ef43163))
+
 ### [1.1.4](https://www.github.com/googleapis/java-dlp/compare/v1.1.3...v1.1.4) (2020-05-01)
 
 
