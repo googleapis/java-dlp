@@ -1,5 +1,17 @@
 # Changelog
 
+### [2.0.1](https://www.github.com/googleapis/java-dlp/compare/v2.0.0...v2.0.1) (2020-07-08)
+
+
+### Bug Fixes
+
+* migrate dlp/v2 to grpc_service_config ([#231](https://www.github.com/googleapis/java-dlp/issues/231)) ([e558868](https://www.github.com/googleapis/java-dlp/commit/e558868cd52c1f6f81cec647a46903b9cf562686))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.2 ([#228](https://www.github.com/googleapis/java-dlp/issues/228)) ([e252739](https://www.github.com/googleapis/java-dlp/commit/e25273959b8e6369266d79c3c947697063c22509))
+
 ## [2.0.0](https://www.github.com/googleapis/java-dlp/compare/v1.1.4...v2.0.0) (2020-06-22)
 
 
