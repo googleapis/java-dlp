@@ -64,7 +64,7 @@ public class DeIdentifyTableConditionInfoTypes {
                     .addValues(
                         Value.newBuilder()
                             .setStringValue(
-                                "Charles Dickens name was a curse, possibly invented by Shakespeare.")
+                                "Charles Dickens name was a curse invented by Shakespeare.")
                             .build())
                     .build())
             .addRows(
