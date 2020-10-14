@@ -44,8 +44,6 @@ If you are using Maven without BOM, add this to your dependencies:
 
 ```
 
-[//]: # ({x-version-update-start:google-cloud-dlp:released})
-
 If you are using Gradle, add this to your dependencies
 ```Groovy
 compile 'com.google.cloud:google-cloud-dlp:2.1.0'
@@ -54,7 +52,6 @@ If you are using SBT, add this to your dependencies
 ```Scala
 libraryDependencies += "com.google.cloud" % "google-cloud-dlp" % "2.1.0"
 ```
-[//]: # ({x-version-update-end})
 
 ## Authentication
 
