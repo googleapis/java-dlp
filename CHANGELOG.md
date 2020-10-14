@@ -1,5 +1,25 @@
 # Changelog
 
+### [2.1.1](https://www.github.com/googleapis/java-dlp/compare/v2.1.0...v2.1.1) (2020-10-14)
+
+
+### Bug Fixes
+
+* flaky testInspectStringMultipleRulesPatientRule ([#264](https://www.github.com/googleapis/java-dlp/issues/264)) ([f8dda41](https://www.github.com/googleapis/java-dlp/commit/f8dda413972df0e348440ffd76d453536731c2bd))
+
+
+### Documentation
+
+* correct the links for parent fields ([#274](https://www.github.com/googleapis/java-dlp/issues/274)) ([44e6c76](https://www.github.com/googleapis/java-dlp/commit/44e6c769f536b6333cc1535329c503e4051e0445))
+* expand parent field format, and BigQuery sampling options. Also describing which transformations are allowed for ReidentifyContent API calls, and the custom alphabet allowed for format-preserving encryption (FPE). ([#266](https://www.github.com/googleapis/java-dlp/issues/266)) ([9a10739](https://www.github.com/googleapis/java-dlp/commit/9a10739284127974c669bd3580ebe29a8f8316a4))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.0 ([#287](https://www.github.com/googleapis/java-dlp/issues/287)) ([680692f](https://www.github.com/googleapis/java-dlp/commit/680692f82f84249467767e75dcfe00457a98351d))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.2 ([#298](https://www.github.com/googleapis/java-dlp/issues/298)) ([4bf3dc4](https://www.github.com/googleapis/java-dlp/commit/4bf3dc4b29c1d937eeaf72418e19ce9adbe631d5))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.9.0 ([#263](https://www.github.com/googleapis/java-dlp/issues/263)) ([56feeb2](https://www.github.com/googleapis/java-dlp/commit/56feeb23faf5fafebeadf98a8a75ac4b64630336))
+
 ## [2.1.0](https://www.github.com/googleapis/java-dlp/compare/v2.0.0...v2.1.0) (2020-08-10)
 
 
