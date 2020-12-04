@@ -101,7 +101,6 @@ import com.google.privacy.dlp.v2.UpdateStoredInfoTypeRequest;
 import com.google.protobuf.Empty;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -243,7 +242,7 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
             @Override
             public Iterable<InspectTemplate> extractResources(
                 ListInspectTemplatesResponse payload) {
-              return Objects.isNull(payload.getInspectTemplatesList())
+              return payload.getInspectTemplatesList() == null
                   ? ImmutableList.<InspectTemplate>of()
                   : payload.getInspectTemplatesList();
             }
@@ -288,7 +287,7 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
             @Override
             public Iterable<DeidentifyTemplate> extractResources(
                 ListDeidentifyTemplatesResponse payload) {
-              return Objects.isNull(payload.getDeidentifyTemplatesList())
+              return payload.getDeidentifyTemplatesList() == null
                   ? ImmutableList.<DeidentifyTemplate>of()
                   : payload.getDeidentifyTemplatesList();
             }
@@ -327,7 +326,7 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
             @Override
             public Iterable<JobTrigger> extractResources(ListJobTriggersResponse payload) {
-              return Objects.isNull(payload.getJobTriggersList())
+              return payload.getJobTriggersList() == null
                   ? ImmutableList.<JobTrigger>of()
                   : payload.getJobTriggersList();
             }
@@ -363,7 +362,7 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
             @Override
             public Iterable<DlpJob> extractResources(ListDlpJobsResponse payload) {
-              return Objects.isNull(payload.getJobsList())
+              return payload.getJobsList() == null
                   ? ImmutableList.<DlpJob>of()
                   : payload.getJobsList();
             }
@@ -403,7 +402,7 @@ public class DlpServiceStubSettings extends StubSettings<DlpServiceStubSettings>
 
             @Override
             public Iterable<StoredInfoType> extractResources(ListStoredInfoTypesResponse payload) {
-              return Objects.isNull(payload.getStoredInfoTypesList())
+              return payload.getStoredInfoTypesList() == null
                   ? ImmutableList.<StoredInfoType>of()
                   : payload.getStoredInfoTypesList();
             }
