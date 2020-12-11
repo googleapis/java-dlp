@@ -520,11 +520,21 @@ public class GrpcDlpServiceStub extends DlpServiceStub {
         DlpServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcDlpServiceStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcDlpServiceStub(DlpServiceStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcDlpServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcDlpServiceStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcDlpServiceStub(
       DlpServiceStubSettings settings,
       ClientContext clientContext,
