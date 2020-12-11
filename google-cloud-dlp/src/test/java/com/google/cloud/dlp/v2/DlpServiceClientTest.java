@@ -170,8 +170,8 @@ public class DlpServiceClientTest {
             .setParent(DlpContentName.ofProjectName("[PROJECT]").toString())
             .setInspectConfig(InspectConfig.newBuilder().build())
             .setItem(ContentItem.newBuilder().build())
-            .setInspectTemplateName("inspect_template_name-1576197051")
-            .setLocationId("location_id552319461")
+            .setInspectTemplateName("inspectTemplateName1828857433")
+            .setLocationId("locationId1541836720")
             .build();
 
     InspectContentResponse actualResponse = client.inspectContent(request);
@@ -203,8 +203,8 @@ public class DlpServiceClientTest {
               .setParent(DlpContentName.ofProjectName("[PROJECT]").toString())
               .setInspectConfig(InspectConfig.newBuilder().build())
               .setItem(ContentItem.newBuilder().build())
-              .setInspectTemplateName("inspect_template_name-1576197051")
-              .setLocationId("location_id552319461")
+              .setInspectTemplateName("inspectTemplateName1828857433")
+              .setLocationId("locationId1541836720")
               .build();
       client.inspectContent(request);
       Assert.fail("No exception raised");
@@ -218,7 +218,7 @@ public class DlpServiceClientTest {
     RedactImageResponse expectedResponse =
         RedactImageResponse.newBuilder()
             .setRedactedImage(ByteString.EMPTY)
-            .setExtractedText("extracted_text998260012")
+            .setExtractedText("extractedText-106686931")
             .setInspectResult(InspectResult.newBuilder().build())
             .build();
     mockDlpService.addResponse(expectedResponse);
@@ -226,7 +226,7 @@ public class DlpServiceClientTest {
     RedactImageRequest request =
         RedactImageRequest.newBuilder()
             .setParent(DlpContentName.ofProjectName("[PROJECT]").toString())
-            .setLocationId("location_id552319461")
+            .setLocationId("locationId1541836720")
             .setInspectConfig(InspectConfig.newBuilder().build())
             .addAllImageRedactionConfigs(new ArrayList<RedactImageRequest.ImageRedactionConfig>())
             .setIncludeFindings(true)
@@ -262,7 +262,7 @@ public class DlpServiceClientTest {
       RedactImageRequest request =
           RedactImageRequest.newBuilder()
               .setParent(DlpContentName.ofProjectName("[PROJECT]").toString())
-              .setLocationId("location_id552319461")
+              .setLocationId("locationId1541836720")
               .setInspectConfig(InspectConfig.newBuilder().build())
               .addAllImageRedactionConfigs(new ArrayList<RedactImageRequest.ImageRedactionConfig>())
               .setIncludeFindings(true)
@@ -290,9 +290,9 @@ public class DlpServiceClientTest {
             .setDeidentifyConfig(DeidentifyConfig.newBuilder().build())
             .setInspectConfig(InspectConfig.newBuilder().build())
             .setItem(ContentItem.newBuilder().build())
-            .setInspectTemplateName("inspect_template_name-1576197051")
-            .setDeidentifyTemplateName("deidentify_template_name-671062786")
-            .setLocationId("location_id552319461")
+            .setInspectTemplateName("inspectTemplateName1828857433")
+            .setDeidentifyTemplateName("deidentifyTemplateName-1374666414")
+            .setLocationId("locationId1541836720")
             .build();
 
     DeidentifyContentResponse actualResponse = client.deidentifyContent(request);
@@ -328,9 +328,9 @@ public class DlpServiceClientTest {
               .setDeidentifyConfig(DeidentifyConfig.newBuilder().build())
               .setInspectConfig(InspectConfig.newBuilder().build())
               .setItem(ContentItem.newBuilder().build())
-              .setInspectTemplateName("inspect_template_name-1576197051")
-              .setDeidentifyTemplateName("deidentify_template_name-671062786")
-              .setLocationId("location_id552319461")
+              .setInspectTemplateName("inspectTemplateName1828857433")
+              .setDeidentifyTemplateName("deidentifyTemplateName-1374666414")
+              .setLocationId("locationId1541836720")
               .build();
       client.deidentifyContent(request);
       Assert.fail("No exception raised");
@@ -354,9 +354,9 @@ public class DlpServiceClientTest {
             .setReidentifyConfig(DeidentifyConfig.newBuilder().build())
             .setInspectConfig(InspectConfig.newBuilder().build())
             .setItem(ContentItem.newBuilder().build())
-            .setInspectTemplateName("inspect_template_name-1576197051")
-            .setReidentifyTemplateName("reidentify_template_name-1609157328")
-            .setLocationId("location_id552319461")
+            .setInspectTemplateName("inspectTemplateName1828857433")
+            .setReidentifyTemplateName("reidentifyTemplateName157316612")
+            .setLocationId("locationId1541836720")
             .build();
 
     ReidentifyContentResponse actualResponse = client.reidentifyContent(request);
@@ -392,9 +392,9 @@ public class DlpServiceClientTest {
               .setReidentifyConfig(DeidentifyConfig.newBuilder().build())
               .setInspectConfig(InspectConfig.newBuilder().build())
               .setItem(ContentItem.newBuilder().build())
-              .setInspectTemplateName("inspect_template_name-1576197051")
-              .setReidentifyTemplateName("reidentify_template_name-1609157328")
-              .setLocationId("location_id552319461")
+              .setInspectTemplateName("inspectTemplateName1828857433")
+              .setReidentifyTemplateName("reidentifyTemplateName157316612")
+              .setLocationId("locationId1541836720")
               .build();
       client.reidentifyContent(request);
       Assert.fail("No exception raised");
@@ -449,7 +449,7 @@ public class DlpServiceClientTest {
                 InspectTemplateName.ofOrganizationInspectTemplateName(
                         "[ORGANIZATION]", "[INSPECT_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -499,7 +499,7 @@ public class DlpServiceClientTest {
                 InspectTemplateName.ofOrganizationInspectTemplateName(
                         "[ORGANIZATION]", "[INSPECT_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -549,7 +549,7 @@ public class DlpServiceClientTest {
                 InspectTemplateName.ofOrganizationInspectTemplateName(
                         "[ORGANIZATION]", "[INSPECT_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -599,7 +599,7 @@ public class DlpServiceClientTest {
                 InspectTemplateName.ofOrganizationInspectTemplateName(
                         "[ORGANIZATION]", "[INSPECT_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -649,7 +649,7 @@ public class DlpServiceClientTest {
                 InspectTemplateName.ofOrganizationInspectTemplateName(
                         "[ORGANIZATION]", "[INSPECT_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -699,7 +699,7 @@ public class DlpServiceClientTest {
                 InspectTemplateName.ofOrganizationInspectTemplateName(
                         "[ORGANIZATION]", "[INSPECT_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -757,7 +757,7 @@ public class DlpServiceClientTest {
                 InspectTemplateName.ofOrganizationInspectTemplateName(
                         "[ORGANIZATION]", "[INSPECT_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -811,7 +811,7 @@ public class DlpServiceClientTest {
                 InspectTemplateName.ofOrganizationInspectTemplateName(
                         "[ORGANIZATION]", "[INSPECT_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -861,7 +861,7 @@ public class DlpServiceClientTest {
                 InspectTemplateName.ofOrganizationInspectTemplateName(
                         "[ORGANIZATION]", "[INSPECT_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1206,7 +1206,7 @@ public class DlpServiceClientTest {
                 DeidentifyTemplateName.ofOrganizationDeidentifyTemplateName(
                         "[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1256,7 +1256,7 @@ public class DlpServiceClientTest {
                 DeidentifyTemplateName.ofOrganizationDeidentifyTemplateName(
                         "[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1306,7 +1306,7 @@ public class DlpServiceClientTest {
                 DeidentifyTemplateName.ofOrganizationDeidentifyTemplateName(
                         "[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1356,7 +1356,7 @@ public class DlpServiceClientTest {
                 DeidentifyTemplateName.ofOrganizationDeidentifyTemplateName(
                         "[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1406,7 +1406,7 @@ public class DlpServiceClientTest {
                 DeidentifyTemplateName.ofOrganizationDeidentifyTemplateName(
                         "[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1456,7 +1456,7 @@ public class DlpServiceClientTest {
                 DeidentifyTemplateName.ofOrganizationDeidentifyTemplateName(
                         "[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1514,7 +1514,7 @@ public class DlpServiceClientTest {
                 DeidentifyTemplateName.ofOrganizationDeidentifyTemplateName(
                         "[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1568,7 +1568,7 @@ public class DlpServiceClientTest {
                 DeidentifyTemplateName.ofOrganizationDeidentifyTemplateName(
                         "[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1619,7 +1619,7 @@ public class DlpServiceClientTest {
                 DeidentifyTemplateName.ofOrganizationDeidentifyTemplateName(
                         "[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]")
                     .toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .setCreateTime(Timestamp.newBuilder().build())
             .setUpdateTime(Timestamp.newBuilder().build())
@@ -1963,7 +1963,7 @@ public class DlpServiceClientTest {
         JobTrigger.newBuilder()
             .setName(
                 JobTriggerName.ofProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllTriggers(new ArrayList<JobTrigger.Trigger>())
             .addAllErrors(new ArrayList<Error>())
@@ -2012,7 +2012,7 @@ public class DlpServiceClientTest {
         JobTrigger.newBuilder()
             .setName(
                 JobTriggerName.ofProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllTriggers(new ArrayList<JobTrigger.Trigger>())
             .addAllErrors(new ArrayList<Error>())
@@ -2061,7 +2061,7 @@ public class DlpServiceClientTest {
         JobTrigger.newBuilder()
             .setName(
                 JobTriggerName.ofProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllTriggers(new ArrayList<JobTrigger.Trigger>())
             .addAllErrors(new ArrayList<Error>())
@@ -2110,7 +2110,7 @@ public class DlpServiceClientTest {
         JobTrigger.newBuilder()
             .setName(
                 JobTriggerName.ofProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllTriggers(new ArrayList<JobTrigger.Trigger>())
             .addAllErrors(new ArrayList<Error>())
@@ -2162,7 +2162,7 @@ public class DlpServiceClientTest {
         JobTrigger.newBuilder()
             .setName(
                 JobTriggerName.ofProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllTriggers(new ArrayList<JobTrigger.Trigger>())
             .addAllErrors(new ArrayList<Error>())
@@ -2286,7 +2286,7 @@ public class DlpServiceClientTest {
         JobTrigger.newBuilder()
             .setName(
                 JobTriggerName.ofProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllTriggers(new ArrayList<JobTrigger.Trigger>())
             .addAllErrors(new ArrayList<Error>())
@@ -2332,7 +2332,7 @@ public class DlpServiceClientTest {
         JobTrigger.newBuilder()
             .setName(
                 JobTriggerName.ofProjectJobTriggerName("[PROJECT]", "[JOB_TRIGGER]").toString())
-            .setDisplayName("display_name1615086568")
+            .setDisplayName("displayName1714148973")
             .setDescription("description-1724546052")
             .addAllTriggers(new ArrayList<JobTrigger.Trigger>())
             .addAllErrors(new ArrayList<Error>())
@@ -2580,7 +2580,7 @@ public class DlpServiceClientTest {
             .setCreateTime(Timestamp.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
-            .setJobTriggerName("job_trigger_name1819490804")
+            .setJobTriggerName("jobTriggerName494333030")
             .addAllErrors(new ArrayList<Error>())
             .build();
     mockDlpService.addResponse(expectedResponse);
@@ -2631,7 +2631,7 @@ public class DlpServiceClientTest {
             .setCreateTime(Timestamp.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
-            .setJobTriggerName("job_trigger_name1819490804")
+            .setJobTriggerName("jobTriggerName494333030")
             .addAllErrors(new ArrayList<Error>())
             .build();
     mockDlpService.addResponse(expectedResponse);
@@ -2677,7 +2677,7 @@ public class DlpServiceClientTest {
             .setCreateTime(Timestamp.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
-            .setJobTriggerName("job_trigger_name1819490804")
+            .setJobTriggerName("jobTriggerName494333030")
             .addAllErrors(new ArrayList<Error>())
             .build();
     mockDlpService.addResponse(expectedResponse);
@@ -2723,7 +2723,7 @@ public class DlpServiceClientTest {
             .setCreateTime(Timestamp.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
-            .setJobTriggerName("job_trigger_name1819490804")
+            .setJobTriggerName("jobTriggerName494333030")
             .addAllErrors(new ArrayList<Error>())
             .build();
     mockDlpService.addResponse(expectedResponse);
@@ -2769,7 +2769,7 @@ public class DlpServiceClientTest {
             .setCreateTime(Timestamp.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
-            .setJobTriggerName("job_trigger_name1819490804")
+            .setJobTriggerName("jobTriggerName494333030")
             .addAllErrors(new ArrayList<Error>())
             .build();
     mockDlpService.addResponse(expectedResponse);
@@ -2815,7 +2815,7 @@ public class DlpServiceClientTest {
             .setCreateTime(Timestamp.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
-            .setJobTriggerName("job_trigger_name1819490804")
+            .setJobTriggerName("jobTriggerName494333030")
             .addAllErrors(new ArrayList<Error>())
             .build();
     mockDlpService.addResponse(expectedResponse);
@@ -2861,7 +2861,7 @@ public class DlpServiceClientTest {
             .setCreateTime(Timestamp.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
-            .setJobTriggerName("job_trigger_name1819490804")
+            .setJobTriggerName("jobTriggerName494333030")
             .addAllErrors(new ArrayList<Error>())
             .build();
     mockDlpService.addResponse(expectedResponse);
@@ -3039,7 +3039,7 @@ public class DlpServiceClientTest {
             .setCreateTime(Timestamp.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
-            .setJobTriggerName("job_trigger_name1819490804")
+            .setJobTriggerName("jobTriggerName494333030")
             .addAllErrors(new ArrayList<Error>())
             .build();
     mockDlpService.addResponse(expectedResponse);
@@ -3082,7 +3082,7 @@ public class DlpServiceClientTest {
             .setCreateTime(Timestamp.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
-            .setJobTriggerName("job_trigger_name1819490804")
+            .setJobTriggerName("jobTriggerName494333030")
             .addAllErrors(new ArrayList<Error>())
             .build();
     mockDlpService.addResponse(expectedResponse);
