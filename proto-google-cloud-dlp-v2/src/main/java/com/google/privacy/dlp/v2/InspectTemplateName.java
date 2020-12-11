@@ -259,7 +259,7 @@ public class InspectTemplateName implements ResourceName {
   public static List<String> toStringList(List<InspectTemplateName> values) {
     List<String> list = new ArrayList<>(values.size());
     for (InspectTemplateName value : values) {
-      if (Objects.isNull(value)) {
+      if (value == null) {
         list.add("");
       } else {
         list.add(value.toString());
@@ -277,20 +277,20 @@ public class InspectTemplateName implements ResourceName {
 
   @Override
   public Map<String, String> getFieldValuesMap() {
-    if (Objects.isNull(fieldValuesMap)) {
+    if (fieldValuesMap == null) {
       synchronized (this) {
-        if (Objects.isNull(fieldValuesMap)) {
+        if (fieldValuesMap == null) {
           ImmutableMap.Builder<String, String> fieldMapBuilder = ImmutableMap.builder();
-          if (!Objects.isNull(organization)) {
+          if (organization != null) {
             fieldMapBuilder.put("organization", organization);
           }
-          if (!Objects.isNull(inspectTemplate)) {
+          if (inspectTemplate != null) {
             fieldMapBuilder.put("inspect_template", inspectTemplate);
           }
-          if (!Objects.isNull(project)) {
+          if (project != null) {
             fieldMapBuilder.put("project", project);
           }
-          if (!Objects.isNull(location)) {
+          if (location != null) {
             fieldMapBuilder.put("location", location);
           }
           fieldValuesMap = fieldMapBuilder.build();
@@ -306,7 +306,7 @@ public class InspectTemplateName implements ResourceName {
 
   @Override
   public String toString() {
-    return !Objects.isNull(fixedValue) ? fixedValue : pathTemplate.instantiate(getFieldValuesMap());
+    return fixedValue != null ? fixedValue : pathTemplate.instantiate(getFieldValuesMap());
   }
 
   @Override
