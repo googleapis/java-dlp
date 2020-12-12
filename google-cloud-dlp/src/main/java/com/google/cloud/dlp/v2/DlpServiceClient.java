@@ -95,7 +95,6 @@ import com.google.protobuf.Empty;
 import com.google.protobuf.FieldMask;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -406,7 +405,7 @@ public class DlpServiceClient implements BackgroundResource {
       LocationName parent, InspectTemplate inspectTemplate) {
     CreateInspectTemplateRequest request =
         CreateInspectTemplateRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setInspectTemplate(inspectTemplate)
             .build();
     return createInspectTemplate(request);
@@ -439,7 +438,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationLocationName parent, InspectTemplate inspectTemplate) {
     CreateInspectTemplateRequest request =
         CreateInspectTemplateRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setInspectTemplate(inspectTemplate)
             .build();
     return createInspectTemplate(request);
@@ -472,7 +471,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationName parent, InspectTemplate inspectTemplate) {
     CreateInspectTemplateRequest request =
         CreateInspectTemplateRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setInspectTemplate(inspectTemplate)
             .build();
     return createInspectTemplate(request);
@@ -505,7 +504,7 @@ public class DlpServiceClient implements BackgroundResource {
       ProjectName parent, InspectTemplate inspectTemplate) {
     CreateInspectTemplateRequest request =
         CreateInspectTemplateRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setInspectTemplate(inspectTemplate)
             .build();
     return createInspectTemplate(request);
@@ -584,7 +583,7 @@ public class DlpServiceClient implements BackgroundResource {
       InspectTemplateName name, InspectTemplate inspectTemplate, FieldMask updateMask) {
     UpdateInspectTemplateRequest request =
         UpdateInspectTemplateRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setInspectTemplate(inspectTemplate)
             .setUpdateMask(updateMask)
             .build();
@@ -651,7 +650,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final InspectTemplate getInspectTemplate(InspectTemplateName name) {
     GetInspectTemplateRequest request =
         GetInspectTemplateRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getInspectTemplate(request);
   }
@@ -720,7 +719,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListInspectTemplatesPagedResponse listInspectTemplates(LocationName parent) {
     ListInspectTemplatesRequest request =
         ListInspectTemplatesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listInspectTemplates(request);
   }
@@ -750,7 +749,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationLocationName parent) {
     ListInspectTemplatesRequest request =
         ListInspectTemplatesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listInspectTemplates(request);
   }
@@ -779,7 +778,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListInspectTemplatesPagedResponse listInspectTemplates(OrganizationName parent) {
     ListInspectTemplatesRequest request =
         ListInspectTemplatesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listInspectTemplates(request);
   }
@@ -808,7 +807,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListInspectTemplatesPagedResponse listInspectTemplates(ProjectName parent) {
     ListInspectTemplatesRequest request =
         ListInspectTemplatesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listInspectTemplates(request);
   }
@@ -887,7 +886,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final void deleteInspectTemplate(InspectTemplateName name) {
     DeleteInspectTemplateRequest request =
         DeleteInspectTemplateRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteInspectTemplate(request);
   }
@@ -959,7 +958,7 @@ public class DlpServiceClient implements BackgroundResource {
       LocationName parent, DeidentifyTemplate deidentifyTemplate) {
     CreateDeidentifyTemplateRequest request =
         CreateDeidentifyTemplateRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setDeidentifyTemplate(deidentifyTemplate)
             .build();
     return createDeidentifyTemplate(request);
@@ -993,7 +992,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationLocationName parent, DeidentifyTemplate deidentifyTemplate) {
     CreateDeidentifyTemplateRequest request =
         CreateDeidentifyTemplateRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setDeidentifyTemplate(deidentifyTemplate)
             .build();
     return createDeidentifyTemplate(request);
@@ -1027,7 +1026,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationName parent, DeidentifyTemplate deidentifyTemplate) {
     CreateDeidentifyTemplateRequest request =
         CreateDeidentifyTemplateRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setDeidentifyTemplate(deidentifyTemplate)
             .build();
     return createDeidentifyTemplate(request);
@@ -1061,7 +1060,7 @@ public class DlpServiceClient implements BackgroundResource {
       ProjectName parent, DeidentifyTemplate deidentifyTemplate) {
     CreateDeidentifyTemplateRequest request =
         CreateDeidentifyTemplateRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setDeidentifyTemplate(deidentifyTemplate)
             .build();
     return createDeidentifyTemplate(request);
@@ -1144,7 +1143,7 @@ public class DlpServiceClient implements BackgroundResource {
       DeidentifyTemplateName name, DeidentifyTemplate deidentifyTemplate, FieldMask updateMask) {
     UpdateDeidentifyTemplateRequest request =
         UpdateDeidentifyTemplateRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setDeidentifyTemplate(deidentifyTemplate)
             .setUpdateMask(updateMask)
             .build();
@@ -1212,7 +1211,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final DeidentifyTemplate getDeidentifyTemplate(DeidentifyTemplateName name) {
     GetDeidentifyTemplateRequest request =
         GetDeidentifyTemplateRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getDeidentifyTemplate(request);
   }
@@ -1282,7 +1281,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListDeidentifyTemplatesPagedResponse listDeidentifyTemplates(LocationName parent) {
     ListDeidentifyTemplatesRequest request =
         ListDeidentifyTemplatesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listDeidentifyTemplates(request);
   }
@@ -1313,7 +1312,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationLocationName parent) {
     ListDeidentifyTemplatesRequest request =
         ListDeidentifyTemplatesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listDeidentifyTemplates(request);
   }
@@ -1344,7 +1343,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationName parent) {
     ListDeidentifyTemplatesRequest request =
         ListDeidentifyTemplatesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listDeidentifyTemplates(request);
   }
@@ -1374,7 +1373,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListDeidentifyTemplatesPagedResponse listDeidentifyTemplates(ProjectName parent) {
     ListDeidentifyTemplatesRequest request =
         ListDeidentifyTemplatesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listDeidentifyTemplates(request);
   }
@@ -1457,7 +1456,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final void deleteDeidentifyTemplate(DeidentifyTemplateName name) {
     DeleteDeidentifyTemplateRequest request =
         DeleteDeidentifyTemplateRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteDeidentifyTemplate(request);
   }
@@ -1523,7 +1522,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final JobTrigger createJobTrigger(LocationName parent, JobTrigger jobTrigger) {
     CreateJobTriggerRequest request =
         CreateJobTriggerRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setJobTrigger(jobTrigger)
             .build();
     return createJobTrigger(request);
@@ -1550,7 +1549,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final JobTrigger createJobTrigger(ProjectName parent, JobTrigger jobTrigger) {
     CreateJobTriggerRequest request =
         CreateJobTriggerRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setJobTrigger(jobTrigger)
             .build();
     return createJobTrigger(request);
@@ -1618,7 +1617,7 @@ public class DlpServiceClient implements BackgroundResource {
       JobTriggerName name, JobTrigger jobTrigger, FieldMask updateMask) {
     UpdateJobTriggerRequest request =
         UpdateJobTriggerRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setJobTrigger(jobTrigger)
             .setUpdateMask(updateMask)
             .build();
@@ -1684,7 +1683,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final HybridInspectResponse hybridInspectJobTrigger(JobTriggerName name) {
     HybridInspectJobTriggerRequest request =
         HybridInspectJobTriggerRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return hybridInspectJobTrigger(request);
   }
@@ -1745,9 +1744,7 @@ public class DlpServiceClient implements BackgroundResource {
    */
   public final JobTrigger getJobTrigger(JobTriggerName name) {
     GetJobTriggerRequest request =
-        GetJobTriggerRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetJobTriggerRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getJobTrigger(request);
   }
 
@@ -1804,7 +1801,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListJobTriggersPagedResponse listJobTriggers(LocationName parent) {
     ListJobTriggersRequest request =
         ListJobTriggersRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listJobTriggers(request);
   }
@@ -1828,7 +1825,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListJobTriggersPagedResponse listJobTriggers(ProjectName parent) {
     ListJobTriggersRequest request =
         ListJobTriggersRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listJobTriggers(request);
   }
@@ -1898,9 +1895,7 @@ public class DlpServiceClient implements BackgroundResource {
    */
   public final void deleteJobTrigger(JobTriggerName name) {
     DeleteJobTriggerRequest request =
-        DeleteJobTriggerRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        DeleteJobTriggerRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     deleteJobTrigger(request);
   }
 
@@ -1990,7 +1985,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final DlpJob createDlpJob(LocationName parent, InspectJobConfig inspectJob) {
     CreateDlpJobRequest request =
         CreateDlpJobRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setInspectJob(inspectJob)
             .build();
     return createDlpJob(request);
@@ -2022,7 +2017,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final DlpJob createDlpJob(LocationName parent, RiskAnalysisJobConfig riskJob) {
     CreateDlpJobRequest request =
         CreateDlpJobRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setRiskJob(riskJob)
             .build();
     return createDlpJob(request);
@@ -2054,7 +2049,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final DlpJob createDlpJob(ProjectName parent, InspectJobConfig inspectJob) {
     CreateDlpJobRequest request =
         CreateDlpJobRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setInspectJob(inspectJob)
             .build();
     return createDlpJob(request);
@@ -2086,7 +2081,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final DlpJob createDlpJob(ProjectName parent, RiskAnalysisJobConfig riskJob) {
     CreateDlpJobRequest request =
         CreateDlpJobRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setRiskJob(riskJob)
             .build();
     return createDlpJob(request);
@@ -2204,7 +2199,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListDlpJobsPagedResponse listDlpJobs(LocationName parent) {
     ListDlpJobsRequest request =
         ListDlpJobsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listDlpJobs(request);
   }
@@ -2230,7 +2225,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListDlpJobsPagedResponse listDlpJobs(ProjectName parent) {
     ListDlpJobsRequest request =
         ListDlpJobsRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listDlpJobs(request);
   }
@@ -2307,9 +2302,7 @@ public class DlpServiceClient implements BackgroundResource {
    */
   public final DlpJob getDlpJob(DlpJobName name) {
     GetDlpJobRequest request =
-        GetDlpJobRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetDlpJobRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getDlpJob(request);
   }
 
@@ -2364,9 +2357,7 @@ public class DlpServiceClient implements BackgroundResource {
    */
   public final void deleteDlpJob(DlpJobName name) {
     DeleteDlpJobRequest request =
-        DeleteDlpJobRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        DeleteDlpJobRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     deleteDlpJob(request);
   }
 
@@ -2466,7 +2457,7 @@ public class DlpServiceClient implements BackgroundResource {
       LocationName parent, StoredInfoTypeConfig config) {
     CreateStoredInfoTypeRequest request =
         CreateStoredInfoTypeRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setConfig(config)
             .build();
     return createStoredInfoType(request);
@@ -2499,7 +2490,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationLocationName parent, StoredInfoTypeConfig config) {
     CreateStoredInfoTypeRequest request =
         CreateStoredInfoTypeRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setConfig(config)
             .build();
     return createStoredInfoType(request);
@@ -2532,7 +2523,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationName parent, StoredInfoTypeConfig config) {
     CreateStoredInfoTypeRequest request =
         CreateStoredInfoTypeRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setConfig(config)
             .build();
     return createStoredInfoType(request);
@@ -2565,7 +2556,7 @@ public class DlpServiceClient implements BackgroundResource {
       ProjectName parent, StoredInfoTypeConfig config) {
     CreateStoredInfoTypeRequest request =
         CreateStoredInfoTypeRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setConfig(config)
             .build();
     return createStoredInfoType(request);
@@ -2642,7 +2633,7 @@ public class DlpServiceClient implements BackgroundResource {
       StoredInfoTypeName name, StoredInfoTypeConfig config, FieldMask updateMask) {
     UpdateStoredInfoTypeRequest request =
         UpdateStoredInfoTypeRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .setConfig(config)
             .setUpdateMask(updateMask)
             .build();
@@ -2713,7 +2704,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final StoredInfoType getStoredInfoType(StoredInfoTypeName name) {
     GetStoredInfoTypeRequest request =
         GetStoredInfoTypeRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return getStoredInfoType(request);
   }
@@ -2781,7 +2772,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListStoredInfoTypesPagedResponse listStoredInfoTypes(LocationName parent) {
     ListStoredInfoTypesRequest request =
         ListStoredInfoTypesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listStoredInfoTypes(request);
   }
@@ -2812,7 +2803,7 @@ public class DlpServiceClient implements BackgroundResource {
       OrganizationLocationName parent) {
     ListStoredInfoTypesRequest request =
         ListStoredInfoTypesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listStoredInfoTypes(request);
   }
@@ -2842,7 +2833,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListStoredInfoTypesPagedResponse listStoredInfoTypes(OrganizationName parent) {
     ListStoredInfoTypesRequest request =
         ListStoredInfoTypesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listStoredInfoTypes(request);
   }
@@ -2872,7 +2863,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final ListStoredInfoTypesPagedResponse listStoredInfoTypes(ProjectName parent) {
     ListStoredInfoTypesRequest request =
         ListStoredInfoTypesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listStoredInfoTypes(request);
   }
@@ -2955,7 +2946,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final void deleteStoredInfoType(StoredInfoTypeName name) {
     DeleteStoredInfoTypeRequest request =
         DeleteStoredInfoTypeRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     deleteStoredInfoType(request);
   }
@@ -3013,7 +3004,7 @@ public class DlpServiceClient implements BackgroundResource {
   public final HybridInspectResponse hybridInspectDlpJob(DlpJobName name) {
     HybridInspectDlpJobRequest request =
         HybridInspectDlpJobRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
+            .setName(name == null ? null : name.toString())
             .build();
     return hybridInspectDlpJob(request);
   }
