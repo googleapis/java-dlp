@@ -22,20 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * The Cloud Data Loss Prevention (DLP) API is a service that allows clients
- * to detect the presence of Personally Identifiable Information (PII) and other
- * privacy-sensitive data in user-supplied, unstructured data streams, like text
- * blocks or images.
- * The service also includes methods for sensitive data redaction and
- * scheduling of data scans on Google Cloud Platform based data sets.
- * To learn more about concepts and find how-to guides see
- * https://cloud.google.com/dlp/docs/.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/privacy/dlp/v2/dlp.proto")
@@ -1628,35 +1615,10 @@ public final class DlpServiceGrpc {
     return DlpServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Cloud Data Loss Prevention (DLP) API is a service that allows clients
-   * to detect the presence of Personally Identifiable Information (PII) and other
-   * privacy-sensitive data in user-supplied, unstructured data streams, like text
-   * blocks or images.
-   * The service also includes methods for sensitive data redaction and
-   * scheduling of data scans on Google Cloud Platform based data sets.
-   * To learn more about concepts and find how-to guides see
-   * https://cloud.google.com/dlp/docs/.
-   * </pre>
-   */
+  /** */
   public abstract static class DlpServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Finds potentially sensitive info in content.
-     * This method has limits on input size, processing time, and output size.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
-     * and https://cloud.google.com/dlp/docs/inspecting-text,
-     * </pre>
-     */
+    /** */
     public void inspectContent(
         com.google.privacy.dlp.v2.InspectContentRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.InspectContentResponse>
@@ -1664,19 +1626,7 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getInspectContentMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Redacts potentially sensitive info from an image.
-     * This method has limits on input size, processing time, and output size.
-     * See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
-     * learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public void redactImage(
         com.google.privacy.dlp.v2.RedactImageRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.RedactImageResponse>
@@ -1684,19 +1634,7 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getRedactImageMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * De-identifies potentially sensitive info from a ContentItem.
-     * This method has limits on input size and output size.
-     * See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
-     * learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public void deidentifyContent(
         com.google.privacy.dlp.v2.DeidentifyContentRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DeidentifyContentResponse>
@@ -1704,16 +1642,7 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getDeidentifyContentMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Re-identifies content that has been de-identified.
-     * See
-     * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
-     * to learn more.
-     * </pre>
-     */
+    /** */
     public void reidentifyContent(
         com.google.privacy.dlp.v2.ReidentifyContentRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ReidentifyContentResponse>
@@ -1721,15 +1650,7 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getReidentifyContentMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns a list of the sensitive information types that the DLP API
-     * supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void listInfoTypes(
         com.google.privacy.dlp.v2.ListInfoTypesRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListInfoTypesResponse>
@@ -1737,57 +1658,28 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getListInfoTypesMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates an InspectTemplate for re-using frequently used configuration
-     * for inspecting content, images, and storage.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void createInspectTemplate(
         com.google.privacy.dlp.v2.CreateInspectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.InspectTemplate> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateInspectTemplateMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void updateInspectTemplate(
         com.google.privacy.dlp.v2.UpdateInspectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.InspectTemplate> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateInspectTemplateMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets an InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void getInspectTemplate(
         com.google.privacy.dlp.v2.GetInspectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.InspectTemplate> responseObserver) {
       asyncUnimplementedUnaryCall(getGetInspectTemplateMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists InspectTemplates.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void listInspectTemplates(
         com.google.privacy.dlp.v2.ListInspectTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListInspectTemplatesResponse>
@@ -1795,30 +1687,14 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getListInspectTemplatesMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void deleteInspectTemplate(
         com.google.privacy.dlp.v2.DeleteInspectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteInspectTemplateMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a DeidentifyTemplate for re-using frequently used configuration
-     * for de-identifying content, images, and storage.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void createDeidentifyTemplate(
         com.google.privacy.dlp.v2.CreateDeidentifyTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DeidentifyTemplate>
@@ -1826,15 +1702,7 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getCreateDeidentifyTemplateMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void updateDeidentifyTemplate(
         com.google.privacy.dlp.v2.UpdateDeidentifyTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DeidentifyTemplate>
@@ -1842,15 +1710,7 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getUpdateDeidentifyTemplateMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void getDeidentifyTemplate(
         com.google.privacy.dlp.v2.GetDeidentifyTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DeidentifyTemplate>
@@ -1858,15 +1718,7 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getGetDeidentifyTemplateMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists DeidentifyTemplates.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void listDeidentifyTemplates(
         com.google.privacy.dlp.v2.ListDeidentifyTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListDeidentifyTemplatesResponse>
@@ -1874,62 +1726,28 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getListDeidentifyTemplatesMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void deleteDeidentifyTemplate(
         com.google.privacy.dlp.v2.DeleteDeidentifyTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteDeidentifyTemplateMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a job trigger to run DLP actions such as scanning storage for
-     * sensitive information on a set schedule.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void createJobTrigger(
         com.google.privacy.dlp.v2.CreateJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.JobTrigger> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateJobTriggerMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void updateJobTrigger(
         com.google.privacy.dlp.v2.UpdateJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.JobTrigger> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateJobTriggerMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Inspect hybrid content and store findings to a trigger. The inspection
-     * will be processed asynchronously. To review the findings monitor the
-     * jobs within the trigger.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public void hybridInspectJobTrigger(
         com.google.privacy.dlp.v2.HybridInspectJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.HybridInspectResponse>
@@ -1937,28 +1755,14 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getHybridInspectJobTriggerMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void getJobTrigger(
         com.google.privacy.dlp.v2.GetJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.JobTrigger> responseObserver) {
       asyncUnimplementedUnaryCall(getGetJobTriggerMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists job triggers.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void listJobTriggers(
         com.google.privacy.dlp.v2.ListJobTriggersRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListJobTriggersResponse>
@@ -1966,61 +1770,28 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getListJobTriggersMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void deleteJobTrigger(
         com.google.privacy.dlp.v2.DeleteJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteJobTriggerMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Activate a job trigger. Causes the immediate execute of a trigger
-     * instead of waiting on the trigger event to occur.
-     * </pre>
-     */
+    /** */
     public void activateJobTrigger(
         com.google.privacy.dlp.v2.ActivateJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DlpJob> responseObserver) {
       asyncUnimplementedUnaryCall(getActivateJobTriggerMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new job to inspect storage or calculate risk metrics.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public void createDlpJob(
         com.google.privacy.dlp.v2.CreateDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DlpJob> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateDlpJobMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists DlpJobs that match the specified filter in the request.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public void listDlpJobs(
         com.google.privacy.dlp.v2.ListDlpJobsRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListDlpJobsResponse>
@@ -2028,110 +1799,49 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getListDlpJobsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the latest state of a long-running DlpJob.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public void getDlpJob(
         com.google.privacy.dlp.v2.GetDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DlpJob> responseObserver) {
       asyncUnimplementedUnaryCall(getGetDlpJobMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a long-running DlpJob. This method indicates that the client is
-     * no longer interested in the DlpJob result. The job will be cancelled if
-     * possible.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public void deleteDlpJob(
         com.google.privacy.dlp.v2.DeleteDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteDlpJobMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts asynchronous cancellation on a long-running DlpJob. The server
-     * makes a best effort to cancel the DlpJob, but success is not
-     * guaranteed.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public void cancelDlpJob(
         com.google.privacy.dlp.v2.CancelDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getCancelDlpJobMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a pre-built stored infoType to be used for inspection.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void createStoredInfoType(
         com.google.privacy.dlp.v2.CreateStoredInfoTypeRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.StoredInfoType> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateStoredInfoTypeMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the stored infoType by creating a new version. The existing version
-     * will continue to be used until the new version is ready.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void updateStoredInfoType(
         com.google.privacy.dlp.v2.UpdateStoredInfoTypeRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.StoredInfoType> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateStoredInfoTypeMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a stored infoType.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void getStoredInfoType(
         com.google.privacy.dlp.v2.GetStoredInfoTypeRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.StoredInfoType> responseObserver) {
       asyncUnimplementedUnaryCall(getGetStoredInfoTypeMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists stored infoTypes.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void listStoredInfoTypes(
         com.google.privacy.dlp.v2.ListStoredInfoTypesRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListStoredInfoTypesResponse>
@@ -2139,33 +1849,14 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getListStoredInfoTypesMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a stored infoType.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void deleteStoredInfoType(
         com.google.privacy.dlp.v2.DeleteStoredInfoTypeRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteStoredInfoTypeMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Inspect hybrid content and store findings to a job.
-     * To review the findings inspect the job. Inspection will occur
-     * asynchronously.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public void hybridInspectDlpJob(
         com.google.privacy.dlp.v2.HybridInspectDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.HybridInspectResponse>
@@ -2173,17 +1864,7 @@ public final class DlpServiceGrpc {
       asyncUnimplementedUnaryCall(getHybridInspectDlpJobMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Finish a running hybrid DlpJob. Triggers the finalization steps and running
-     * of any enabled actions that have not yet run.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public void finishDlpJob(
         com.google.privacy.dlp.v2.FinishDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2420,20 +2101,7 @@ public final class DlpServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Cloud Data Loss Prevention (DLP) API is a service that allows clients
-   * to detect the presence of Personally Identifiable Information (PII) and other
-   * privacy-sensitive data in user-supplied, unstructured data streams, like text
-   * blocks or images.
-   * The service also includes methods for sensitive data redaction and
-   * scheduling of data scans on Google Cloud Platform based data sets.
-   * To learn more about concepts and find how-to guides see
-   * https://cloud.google.com/dlp/docs/.
-   * </pre>
-   */
+  /** */
   public static final class DlpServiceStub extends io.grpc.stub.AbstractAsyncStub<DlpServiceStub> {
     private DlpServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -2444,19 +2112,7 @@ public final class DlpServiceGrpc {
       return new DlpServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Finds potentially sensitive info in content.
-     * This method has limits on input size, processing time, and output size.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
-     * and https://cloud.google.com/dlp/docs/inspecting-text,
-     * </pre>
-     */
+    /** */
     public void inspectContent(
         com.google.privacy.dlp.v2.InspectContentRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.InspectContentResponse>
@@ -2467,19 +2123,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Redacts potentially sensitive info from an image.
-     * This method has limits on input size, processing time, and output size.
-     * See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
-     * learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public void redactImage(
         com.google.privacy.dlp.v2.RedactImageRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.RedactImageResponse>
@@ -2490,19 +2134,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * De-identifies potentially sensitive info from a ContentItem.
-     * This method has limits on input size and output size.
-     * See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
-     * learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public void deidentifyContent(
         com.google.privacy.dlp.v2.DeidentifyContentRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DeidentifyContentResponse>
@@ -2513,16 +2145,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Re-identifies content that has been de-identified.
-     * See
-     * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
-     * to learn more.
-     * </pre>
-     */
+    /** */
     public void reidentifyContent(
         com.google.privacy.dlp.v2.ReidentifyContentRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ReidentifyContentResponse>
@@ -2533,15 +2156,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns a list of the sensitive information types that the DLP API
-     * supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void listInfoTypes(
         com.google.privacy.dlp.v2.ListInfoTypesRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListInfoTypesResponse>
@@ -2552,15 +2167,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates an InspectTemplate for re-using frequently used configuration
-     * for inspecting content, images, and storage.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void createInspectTemplate(
         com.google.privacy.dlp.v2.CreateInspectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.InspectTemplate> responseObserver) {
@@ -2570,14 +2177,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void updateInspectTemplate(
         com.google.privacy.dlp.v2.UpdateInspectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.InspectTemplate> responseObserver) {
@@ -2587,14 +2187,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets an InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void getInspectTemplate(
         com.google.privacy.dlp.v2.GetInspectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.InspectTemplate> responseObserver) {
@@ -2604,14 +2197,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists InspectTemplates.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void listInspectTemplates(
         com.google.privacy.dlp.v2.ListInspectTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListInspectTemplatesResponse>
@@ -2622,14 +2208,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public void deleteInspectTemplate(
         com.google.privacy.dlp.v2.DeleteInspectTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2639,16 +2218,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a DeidentifyTemplate for re-using frequently used configuration
-     * for de-identifying content, images, and storage.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void createDeidentifyTemplate(
         com.google.privacy.dlp.v2.CreateDeidentifyTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DeidentifyTemplate>
@@ -2659,15 +2229,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void updateDeidentifyTemplate(
         com.google.privacy.dlp.v2.UpdateDeidentifyTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DeidentifyTemplate>
@@ -2678,15 +2240,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void getDeidentifyTemplate(
         com.google.privacy.dlp.v2.GetDeidentifyTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DeidentifyTemplate>
@@ -2697,15 +2251,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists DeidentifyTemplates.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void listDeidentifyTemplates(
         com.google.privacy.dlp.v2.ListDeidentifyTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListDeidentifyTemplatesResponse>
@@ -2716,15 +2262,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public void deleteDeidentifyTemplate(
         com.google.privacy.dlp.v2.DeleteDeidentifyTemplateRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2734,15 +2272,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a job trigger to run DLP actions such as scanning storage for
-     * sensitive information on a set schedule.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void createJobTrigger(
         com.google.privacy.dlp.v2.CreateJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.JobTrigger> responseObserver) {
@@ -2752,14 +2282,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void updateJobTrigger(
         com.google.privacy.dlp.v2.UpdateJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.JobTrigger> responseObserver) {
@@ -2769,18 +2292,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Inspect hybrid content and store findings to a trigger. The inspection
-     * will be processed asynchronously. To review the findings monitor the
-     * jobs within the trigger.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public void hybridInspectJobTrigger(
         com.google.privacy.dlp.v2.HybridInspectJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.HybridInspectResponse>
@@ -2791,14 +2303,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void getJobTrigger(
         com.google.privacy.dlp.v2.GetJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.JobTrigger> responseObserver) {
@@ -2808,14 +2313,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists job triggers.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void listJobTriggers(
         com.google.privacy.dlp.v2.ListJobTriggersRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListJobTriggersResponse>
@@ -2826,14 +2324,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public void deleteJobTrigger(
         com.google.privacy.dlp.v2.DeleteJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2843,14 +2334,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Activate a job trigger. Causes the immediate execute of a trigger
-     * instead of waiting on the trigger event to occur.
-     * </pre>
-     */
+    /** */
     public void activateJobTrigger(
         com.google.privacy.dlp.v2.ActivateJobTriggerRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DlpJob> responseObserver) {
@@ -2860,18 +2344,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new job to inspect storage or calculate risk metrics.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public void createDlpJob(
         com.google.privacy.dlp.v2.CreateDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DlpJob> responseObserver) {
@@ -2881,15 +2354,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists DlpJobs that match the specified filter in the request.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public void listDlpJobs(
         com.google.privacy.dlp.v2.ListDlpJobsRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListDlpJobsResponse>
@@ -2900,15 +2365,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the latest state of a long-running DlpJob.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public void getDlpJob(
         com.google.privacy.dlp.v2.GetDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.DlpJob> responseObserver) {
@@ -2916,17 +2373,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getGetDlpJobMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a long-running DlpJob. This method indicates that the client is
-     * no longer interested in the DlpJob result. The job will be cancelled if
-     * possible.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public void deleteDlpJob(
         com.google.privacy.dlp.v2.DeleteDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2936,17 +2383,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts asynchronous cancellation on a long-running DlpJob. The server
-     * makes a best effort to cancel the DlpJob, but success is not
-     * guaranteed.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public void cancelDlpJob(
         com.google.privacy.dlp.v2.CancelDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2956,15 +2393,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a pre-built stored infoType to be used for inspection.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void createStoredInfoType(
         com.google.privacy.dlp.v2.CreateStoredInfoTypeRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.StoredInfoType> responseObserver) {
@@ -2974,16 +2403,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the stored infoType by creating a new version. The existing version
-     * will continue to be used until the new version is ready.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void updateStoredInfoType(
         com.google.privacy.dlp.v2.UpdateStoredInfoTypeRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.StoredInfoType> responseObserver) {
@@ -2993,15 +2413,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a stored infoType.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void getStoredInfoType(
         com.google.privacy.dlp.v2.GetStoredInfoTypeRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.StoredInfoType> responseObserver) {
@@ -3011,15 +2423,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists stored infoTypes.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void listStoredInfoTypes(
         com.google.privacy.dlp.v2.ListStoredInfoTypesRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.ListStoredInfoTypesResponse>
@@ -3030,15 +2434,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a stored infoType.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public void deleteStoredInfoType(
         com.google.privacy.dlp.v2.DeleteStoredInfoTypeRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -3048,18 +2444,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Inspect hybrid content and store findings to a job.
-     * To review the findings inspect the job. Inspection will occur
-     * asynchronously.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public void hybridInspectDlpJob(
         com.google.privacy.dlp.v2.HybridInspectDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.privacy.dlp.v2.HybridInspectResponse>
@@ -3070,17 +2455,7 @@ public final class DlpServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Finish a running hybrid DlpJob. Triggers the finalization steps and running
-     * of any enabled actions that have not yet run.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public void finishDlpJob(
         com.google.privacy.dlp.v2.FinishDlpJobRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -3091,20 +2466,7 @@ public final class DlpServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Cloud Data Loss Prevention (DLP) API is a service that allows clients
-   * to detect the presence of Personally Identifiable Information (PII) and other
-   * privacy-sensitive data in user-supplied, unstructured data streams, like text
-   * blocks or images.
-   * The service also includes methods for sensitive data redaction and
-   * scheduling of data scans on Google Cloud Platform based data sets.
-   * To learn more about concepts and find how-to guides see
-   * https://cloud.google.com/dlp/docs/.
-   * </pre>
-   */
+  /** */
   public static final class DlpServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DlpServiceBlockingStub> {
     private DlpServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -3117,541 +2479,235 @@ public final class DlpServiceGrpc {
       return new DlpServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Finds potentially sensitive info in content.
-     * This method has limits on input size, processing time, and output size.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
-     * and https://cloud.google.com/dlp/docs/inspecting-text,
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.InspectContentResponse inspectContent(
         com.google.privacy.dlp.v2.InspectContentRequest request) {
       return blockingUnaryCall(getChannel(), getInspectContentMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Redacts potentially sensitive info from an image.
-     * This method has limits on input size, processing time, and output size.
-     * See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
-     * learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.RedactImageResponse redactImage(
         com.google.privacy.dlp.v2.RedactImageRequest request) {
       return blockingUnaryCall(getChannel(), getRedactImageMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * De-identifies potentially sensitive info from a ContentItem.
-     * This method has limits on input size and output size.
-     * See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
-     * learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.DeidentifyContentResponse deidentifyContent(
         com.google.privacy.dlp.v2.DeidentifyContentRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeidentifyContentMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Re-identifies content that has been de-identified.
-     * See
-     * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
-     * to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.ReidentifyContentResponse reidentifyContent(
         com.google.privacy.dlp.v2.ReidentifyContentRequest request) {
       return blockingUnaryCall(
           getChannel(), getReidentifyContentMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns a list of the sensitive information types that the DLP API
-     * supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.ListInfoTypesResponse listInfoTypes(
         com.google.privacy.dlp.v2.ListInfoTypesRequest request) {
       return blockingUnaryCall(getChannel(), getListInfoTypesMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates an InspectTemplate for re-using frequently used configuration
-     * for inspecting content, images, and storage.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.InspectTemplate createInspectTemplate(
         com.google.privacy.dlp.v2.CreateInspectTemplateRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateInspectTemplateMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.InspectTemplate updateInspectTemplate(
         com.google.privacy.dlp.v2.UpdateInspectTemplateRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateInspectTemplateMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets an InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.InspectTemplate getInspectTemplate(
         com.google.privacy.dlp.v2.GetInspectTemplateRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetInspectTemplateMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists InspectTemplates.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.ListInspectTemplatesResponse listInspectTemplates(
         com.google.privacy.dlp.v2.ListInspectTemplatesRequest request) {
       return blockingUnaryCall(
           getChannel(), getListInspectTemplatesMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteInspectTemplate(
         com.google.privacy.dlp.v2.DeleteInspectTemplateRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteInspectTemplateMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a DeidentifyTemplate for re-using frequently used configuration
-     * for de-identifying content, images, and storage.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.DeidentifyTemplate createDeidentifyTemplate(
         com.google.privacy.dlp.v2.CreateDeidentifyTemplateRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateDeidentifyTemplateMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.DeidentifyTemplate updateDeidentifyTemplate(
         com.google.privacy.dlp.v2.UpdateDeidentifyTemplateRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateDeidentifyTemplateMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.DeidentifyTemplate getDeidentifyTemplate(
         com.google.privacy.dlp.v2.GetDeidentifyTemplateRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetDeidentifyTemplateMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists DeidentifyTemplates.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.ListDeidentifyTemplatesResponse listDeidentifyTemplates(
         com.google.privacy.dlp.v2.ListDeidentifyTemplatesRequest request) {
       return blockingUnaryCall(
           getChannel(), getListDeidentifyTemplatesMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteDeidentifyTemplate(
         com.google.privacy.dlp.v2.DeleteDeidentifyTemplateRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteDeidentifyTemplateMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a job trigger to run DLP actions such as scanning storage for
-     * sensitive information on a set schedule.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.JobTrigger createJobTrigger(
         com.google.privacy.dlp.v2.CreateJobTriggerRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateJobTriggerMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.JobTrigger updateJobTrigger(
         com.google.privacy.dlp.v2.UpdateJobTriggerRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateJobTriggerMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Inspect hybrid content and store findings to a trigger. The inspection
-     * will be processed asynchronously. To review the findings monitor the
-     * jobs within the trigger.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.HybridInspectResponse hybridInspectJobTrigger(
         com.google.privacy.dlp.v2.HybridInspectJobTriggerRequest request) {
       return blockingUnaryCall(
           getChannel(), getHybridInspectJobTriggerMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.JobTrigger getJobTrigger(
         com.google.privacy.dlp.v2.GetJobTriggerRequest request) {
       return blockingUnaryCall(getChannel(), getGetJobTriggerMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists job triggers.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.ListJobTriggersResponse listJobTriggers(
         com.google.privacy.dlp.v2.ListJobTriggersRequest request) {
       return blockingUnaryCall(getChannel(), getListJobTriggersMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteJobTrigger(
         com.google.privacy.dlp.v2.DeleteJobTriggerRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteJobTriggerMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Activate a job trigger. Causes the immediate execute of a trigger
-     * instead of waiting on the trigger event to occur.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.DlpJob activateJobTrigger(
         com.google.privacy.dlp.v2.ActivateJobTriggerRequest request) {
       return blockingUnaryCall(
           getChannel(), getActivateJobTriggerMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new job to inspect storage or calculate risk metrics.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.DlpJob createDlpJob(
         com.google.privacy.dlp.v2.CreateDlpJobRequest request) {
       return blockingUnaryCall(getChannel(), getCreateDlpJobMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists DlpJobs that match the specified filter in the request.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.ListDlpJobsResponse listDlpJobs(
         com.google.privacy.dlp.v2.ListDlpJobsRequest request) {
       return blockingUnaryCall(getChannel(), getListDlpJobsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the latest state of a long-running DlpJob.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.DlpJob getDlpJob(
         com.google.privacy.dlp.v2.GetDlpJobRequest request) {
       return blockingUnaryCall(getChannel(), getGetDlpJobMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a long-running DlpJob. This method indicates that the client is
-     * no longer interested in the DlpJob result. The job will be cancelled if
-     * possible.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteDlpJob(
         com.google.privacy.dlp.v2.DeleteDlpJobRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteDlpJobMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts asynchronous cancellation on a long-running DlpJob. The server
-     * makes a best effort to cancel the DlpJob, but success is not
-     * guaranteed.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty cancelDlpJob(
         com.google.privacy.dlp.v2.CancelDlpJobRequest request) {
       return blockingUnaryCall(getChannel(), getCancelDlpJobMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a pre-built stored infoType to be used for inspection.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.StoredInfoType createStoredInfoType(
         com.google.privacy.dlp.v2.CreateStoredInfoTypeRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateStoredInfoTypeMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the stored infoType by creating a new version. The existing version
-     * will continue to be used until the new version is ready.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.StoredInfoType updateStoredInfoType(
         com.google.privacy.dlp.v2.UpdateStoredInfoTypeRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateStoredInfoTypeMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a stored infoType.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.StoredInfoType getStoredInfoType(
         com.google.privacy.dlp.v2.GetStoredInfoTypeRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetStoredInfoTypeMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists stored infoTypes.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.ListStoredInfoTypesResponse listStoredInfoTypes(
         com.google.privacy.dlp.v2.ListStoredInfoTypesRequest request) {
       return blockingUnaryCall(
           getChannel(), getListStoredInfoTypesMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a stored infoType.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteStoredInfoType(
         com.google.privacy.dlp.v2.DeleteStoredInfoTypeRequest request) {
       return blockingUnaryCall(
           getChannel(), getDeleteStoredInfoTypeMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Inspect hybrid content and store findings to a job.
-     * To review the findings inspect the job. Inspection will occur
-     * asynchronously.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public com.google.privacy.dlp.v2.HybridInspectResponse hybridInspectDlpJob(
         com.google.privacy.dlp.v2.HybridInspectDlpJobRequest request) {
       return blockingUnaryCall(
           getChannel(), getHybridInspectDlpJobMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Finish a running hybrid DlpJob. Triggers the finalization steps and running
-     * of any enabled actions that have not yet run.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty finishDlpJob(
         com.google.privacy.dlp.v2.FinishDlpJobRequest request) {
       return blockingUnaryCall(getChannel(), getFinishDlpJobMethod(), getCallOptions(), request);
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * The Cloud Data Loss Prevention (DLP) API is a service that allows clients
-   * to detect the presence of Personally Identifiable Information (PII) and other
-   * privacy-sensitive data in user-supplied, unstructured data streams, like text
-   * blocks or images.
-   * The service also includes methods for sensitive data redaction and
-   * scheduling of data scans on Google Cloud Platform based data sets.
-   * To learn more about concepts and find how-to guides see
-   * https://cloud.google.com/dlp/docs/.
-   * </pre>
-   */
+  /** */
   public static final class DlpServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<DlpServiceFutureStub> {
     private DlpServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -3663,19 +2719,7 @@ public final class DlpServiceGrpc {
       return new DlpServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Finds potentially sensitive info in content.
-     * This method has limits on input size, processing time, and output size.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images
-     * and https://cloud.google.com/dlp/docs/inspecting-text,
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.InspectContentResponse>
         inspectContent(com.google.privacy.dlp.v2.InspectContentRequest request) {
@@ -3683,19 +2727,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getInspectContentMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Redacts potentially sensitive info from an image.
-     * This method has limits on input size, processing time, and output size.
-     * See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to
-     * learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.RedactImageResponse>
         redactImage(com.google.privacy.dlp.v2.RedactImageRequest request) {
@@ -3703,19 +2735,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getRedactImageMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * De-identifies potentially sensitive info from a ContentItem.
-     * This method has limits on input size and output size.
-     * See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to
-     * learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in this request, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.DeidentifyContentResponse>
         deidentifyContent(com.google.privacy.dlp.v2.DeidentifyContentRequest request) {
@@ -3723,16 +2743,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getDeidentifyContentMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Re-identifies content that has been de-identified.
-     * See
-     * https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example
-     * to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.ReidentifyContentResponse>
         reidentifyContent(com.google.privacy.dlp.v2.ReidentifyContentRequest request) {
@@ -3740,15 +2751,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getReidentifyContentMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns a list of the sensitive information types that the DLP API
-     * supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.ListInfoTypesResponse>
         listInfoTypes(com.google.privacy.dlp.v2.ListInfoTypesRequest request) {
@@ -3756,15 +2759,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getListInfoTypesMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates an InspectTemplate for re-using frequently used configuration
-     * for inspecting content, images, and storage.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.InspectTemplate>
         createInspectTemplate(com.google.privacy.dlp.v2.CreateInspectTemplateRequest request) {
@@ -3772,14 +2767,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getCreateInspectTemplateMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.InspectTemplate>
         updateInspectTemplate(com.google.privacy.dlp.v2.UpdateInspectTemplateRequest request) {
@@ -3787,14 +2775,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getUpdateInspectTemplateMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets an InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.InspectTemplate>
         getInspectTemplate(com.google.privacy.dlp.v2.GetInspectTemplateRequest request) {
@@ -3802,14 +2783,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getGetInspectTemplateMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists InspectTemplates.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.ListInspectTemplatesResponse>
         listInspectTemplates(com.google.privacy.dlp.v2.ListInspectTemplatesRequest request) {
@@ -3817,30 +2791,14 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getListInspectTemplatesMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an InspectTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteInspectTemplate(com.google.privacy.dlp.v2.DeleteInspectTemplateRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteInspectTemplateMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a DeidentifyTemplate for re-using frequently used configuration
-     * for de-identifying content, images, and storage.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.DeidentifyTemplate>
         createDeidentifyTemplate(
@@ -3849,15 +2807,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getCreateDeidentifyTemplateMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.DeidentifyTemplate>
         updateDeidentifyTemplate(
@@ -3866,15 +2816,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getUpdateDeidentifyTemplateMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.DeidentifyTemplate>
         getDeidentifyTemplate(com.google.privacy.dlp.v2.GetDeidentifyTemplateRequest request) {
@@ -3882,15 +2824,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getGetDeidentifyTemplateMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists DeidentifyTemplates.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.ListDeidentifyTemplatesResponse>
         listDeidentifyTemplates(com.google.privacy.dlp.v2.ListDeidentifyTemplatesRequest request) {
@@ -3898,15 +2832,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getListDeidentifyTemplatesMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a DeidentifyTemplate.
-     * See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-     * more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteDeidentifyTemplate(
             com.google.privacy.dlp.v2.DeleteDeidentifyTemplateRequest request) {
@@ -3914,47 +2840,21 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getDeleteDeidentifyTemplateMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a job trigger to run DLP actions such as scanning storage for
-     * sensitive information on a set schedule.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.privacy.dlp.v2.JobTrigger>
         createJobTrigger(com.google.privacy.dlp.v2.CreateJobTriggerRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateJobTriggerMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.privacy.dlp.v2.JobTrigger>
         updateJobTrigger(com.google.privacy.dlp.v2.UpdateJobTriggerRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateJobTriggerMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Inspect hybrid content and store findings to a trigger. The inspection
-     * will be processed asynchronously. To review the findings monitor the
-     * jobs within the trigger.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.HybridInspectResponse>
         hybridInspectJobTrigger(com.google.privacy.dlp.v2.HybridInspectJobTriggerRequest request) {
@@ -3962,28 +2862,14 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getHybridInspectJobTriggerMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.privacy.dlp.v2.JobTrigger>
         getJobTrigger(com.google.privacy.dlp.v2.GetJobTriggerRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetJobTriggerMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists job triggers.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.ListJobTriggersResponse>
         listJobTriggers(com.google.privacy.dlp.v2.ListJobTriggersRequest request) {
@@ -3991,61 +2877,28 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getListJobTriggersMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a job trigger.
-     * See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteJobTrigger(com.google.privacy.dlp.v2.DeleteJobTriggerRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteJobTriggerMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Activate a job trigger. Causes the immediate execute of a trigger
-     * instead of waiting on the trigger event to occur.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.privacy.dlp.v2.DlpJob>
         activateJobTrigger(com.google.privacy.dlp.v2.ActivateJobTriggerRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getActivateJobTriggerMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new job to inspect storage or calculate risk metrics.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-     * system will automatically choose what detectors to run. By default this may
-     * be all types, but may change over time as detectors are updated.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.privacy.dlp.v2.DlpJob>
         createDlpJob(com.google.privacy.dlp.v2.CreateDlpJobRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateDlpJobMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists DlpJobs that match the specified filter in the request.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.ListDlpJobsResponse>
         listDlpJobs(com.google.privacy.dlp.v2.ListDlpJobsRequest request) {
@@ -4053,63 +2906,27 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getListDlpJobsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the latest state of a long-running DlpJob.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.privacy.dlp.v2.DlpJob>
         getDlpJob(com.google.privacy.dlp.v2.GetDlpJobRequest request) {
       return futureUnaryCall(getChannel().newCall(getGetDlpJobMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a long-running DlpJob. This method indicates that the client is
-     * no longer interested in the DlpJob result. The job will be cancelled if
-     * possible.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteDlpJob(com.google.privacy.dlp.v2.DeleteDlpJobRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteDlpJobMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts asynchronous cancellation on a long-running DlpJob. The server
-     * makes a best effort to cancel the DlpJob, but success is not
-     * guaranteed.
-     * See https://cloud.google.com/dlp/docs/inspecting-storage and
-     * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         cancelDlpJob(com.google.privacy.dlp.v2.CancelDlpJobRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCancelDlpJobMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a pre-built stored infoType to be used for inspection.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.StoredInfoType>
         createStoredInfoType(com.google.privacy.dlp.v2.CreateStoredInfoTypeRequest request) {
@@ -4117,16 +2934,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getCreateStoredInfoTypeMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the stored infoType by creating a new version. The existing version
-     * will continue to be used until the new version is ready.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.StoredInfoType>
         updateStoredInfoType(com.google.privacy.dlp.v2.UpdateStoredInfoTypeRequest request) {
@@ -4134,15 +2942,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getUpdateStoredInfoTypeMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a stored infoType.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.StoredInfoType>
         getStoredInfoType(com.google.privacy.dlp.v2.GetStoredInfoTypeRequest request) {
@@ -4150,15 +2950,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getGetStoredInfoTypeMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists stored infoTypes.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.ListStoredInfoTypesResponse>
         listStoredInfoTypes(com.google.privacy.dlp.v2.ListStoredInfoTypesRequest request) {
@@ -4166,33 +2958,14 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getListStoredInfoTypesMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a stored infoType.
-     * See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-     * learn more.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteStoredInfoType(com.google.privacy.dlp.v2.DeleteStoredInfoTypeRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteStoredInfoTypeMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Inspect hybrid content and store findings to a job.
-     * To review the findings inspect the job. Inspection will occur
-     * asynchronously.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.privacy.dlp.v2.HybridInspectResponse>
         hybridInspectDlpJob(com.google.privacy.dlp.v2.HybridInspectDlpJobRequest request) {
@@ -4200,17 +2973,7 @@ public final class DlpServiceGrpc {
           getChannel().newCall(getHybridInspectDlpJobMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Finish a running hybrid DlpJob. Triggers the finalization steps and running
-     * of any enabled actions that have not yet run.
-     * Early access feature is in a pre-release state and might change or have
-     * limited support. For more information, see
-     * https://cloud.google.com/products#product-launch-stages.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         finishDlpJob(com.google.privacy.dlp.v2.FinishDlpJobRequest request) {
       return futureUnaryCall(
