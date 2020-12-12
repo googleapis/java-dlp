@@ -398,7 +398,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param inspect_template Required. The InspectTemplate to create.
+   * @param inspectTemplate Required. The InspectTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final InspectTemplate createInspectTemplate(
@@ -431,7 +431,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param inspect_template Required. The InspectTemplate to create.
+   * @param inspectTemplate Required. The InspectTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final InspectTemplate createInspectTemplate(
@@ -464,7 +464,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param inspect_template Required. The InspectTemplate to create.
+   * @param inspectTemplate Required. The InspectTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final InspectTemplate createInspectTemplate(
@@ -497,7 +497,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param inspect_template Required. The InspectTemplate to create.
+   * @param inspectTemplate Required. The InspectTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final InspectTemplate createInspectTemplate(
@@ -530,7 +530,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param inspect_template Required. The InspectTemplate to create.
+   * @param inspectTemplate Required. The InspectTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final InspectTemplate createInspectTemplate(
@@ -575,8 +575,8 @@ public class DlpServiceClient implements BackgroundResource {
    * @param name Required. Resource name of organization and inspectTemplate to be updated, for
    *     example `organizations/433245324/inspectTemplates/432452342` or
    *     projects/project-id/inspectTemplates/432452342.
-   * @param inspect_template New InspectTemplate value.
-   * @param update_mask Mask to control which fields get updated.
+   * @param inspectTemplate New InspectTemplate value.
+   * @param updateMask Mask to control which fields get updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final InspectTemplate updateInspectTemplate(
@@ -598,8 +598,8 @@ public class DlpServiceClient implements BackgroundResource {
    * @param name Required. Resource name of organization and inspectTemplate to be updated, for
    *     example `organizations/433245324/inspectTemplates/432452342` or
    *     projects/project-id/inspectTemplates/432452342.
-   * @param inspect_template New InspectTemplate value.
-   * @param update_mask Mask to control which fields get updated.
+   * @param inspectTemplate New InspectTemplate value.
+   * @param updateMask Mask to control which fields get updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final InspectTemplate updateInspectTemplate(
@@ -951,7 +951,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param deidentify_template Required. The DeidentifyTemplate to create.
+   * @param deidentifyTemplate Required. The DeidentifyTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DeidentifyTemplate createDeidentifyTemplate(
@@ -985,7 +985,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param deidentify_template Required. The DeidentifyTemplate to create.
+   * @param deidentifyTemplate Required. The DeidentifyTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DeidentifyTemplate createDeidentifyTemplate(
@@ -1019,7 +1019,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param deidentify_template Required. The DeidentifyTemplate to create.
+   * @param deidentifyTemplate Required. The DeidentifyTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DeidentifyTemplate createDeidentifyTemplate(
@@ -1053,7 +1053,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param deidentify_template Required. The DeidentifyTemplate to create.
+   * @param deidentifyTemplate Required. The DeidentifyTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DeidentifyTemplate createDeidentifyTemplate(
@@ -1087,7 +1087,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param deidentify_template Required. The DeidentifyTemplate to create.
+   * @param deidentifyTemplate Required. The DeidentifyTemplate to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DeidentifyTemplate createDeidentifyTemplate(
@@ -1135,8 +1135,8 @@ public class DlpServiceClient implements BackgroundResource {
    * @param name Required. Resource name of organization and deidentify template to be updated, for
    *     example `organizations/433245324/deidentifyTemplates/432452342` or
    *     projects/project-id/deidentifyTemplates/432452342.
-   * @param deidentify_template New DeidentifyTemplate value.
-   * @param update_mask Mask to control which fields get updated.
+   * @param deidentifyTemplate New DeidentifyTemplate value.
+   * @param updateMask Mask to control which fields get updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DeidentifyTemplate updateDeidentifyTemplate(
@@ -1158,8 +1158,8 @@ public class DlpServiceClient implements BackgroundResource {
    * @param name Required. Resource name of organization and deidentify template to be updated, for
    *     example `organizations/433245324/deidentifyTemplates/432452342` or
    *     projects/project-id/deidentifyTemplates/432452342.
-   * @param deidentify_template New DeidentifyTemplate value.
-   * @param update_mask Mask to control which fields get updated.
+   * @param deidentifyTemplate New DeidentifyTemplate value.
+   * @param updateMask Mask to control which fields get updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DeidentifyTemplate updateDeidentifyTemplate(
@@ -1516,7 +1516,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param job_trigger Required. The JobTrigger to create.
+   * @param jobTrigger Required. The JobTrigger to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final JobTrigger createJobTrigger(LocationName parent, JobTrigger jobTrigger) {
@@ -1543,7 +1543,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param job_trigger Required. The JobTrigger to create.
+   * @param jobTrigger Required. The JobTrigger to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final JobTrigger createJobTrigger(ProjectName parent, JobTrigger jobTrigger) {
@@ -1570,7 +1570,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param job_trigger Required. The JobTrigger to create.
+   * @param jobTrigger Required. The JobTrigger to create.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final JobTrigger createJobTrigger(String parent, JobTrigger jobTrigger) {
@@ -1609,8 +1609,8 @@ public class DlpServiceClient implements BackgroundResource {
    *
    * @param name Required. Resource name of the project and the triggeredJob, for example
    *     `projects/dlp-test-project/jobTriggers/53234423`.
-   * @param job_trigger New JobTrigger value.
-   * @param update_mask Mask to control which fields get updated.
+   * @param jobTrigger New JobTrigger value.
+   * @param updateMask Mask to control which fields get updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final JobTrigger updateJobTrigger(
@@ -1631,8 +1631,8 @@ public class DlpServiceClient implements BackgroundResource {
    *
    * @param name Required. Resource name of the project and the triggeredJob, for example
    *     `projects/dlp-test-project/jobTriggers/53234423`.
-   * @param job_trigger New JobTrigger value.
-   * @param update_mask Mask to control which fields get updated.
+   * @param jobTrigger New JobTrigger value.
+   * @param updateMask Mask to control which fields get updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final JobTrigger updateJobTrigger(
@@ -1979,7 +1979,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param inspect_job Set to control what and how to inspect.
+   * @param inspectJob Set to control what and how to inspect.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DlpJob createDlpJob(LocationName parent, InspectJobConfig inspectJob) {
@@ -2011,7 +2011,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param risk_job Set to choose what metric to calculate.
+   * @param riskJob Set to choose what metric to calculate.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DlpJob createDlpJob(LocationName parent, RiskAnalysisJobConfig riskJob) {
@@ -2043,7 +2043,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param inspect_job Set to control what and how to inspect.
+   * @param inspectJob Set to control what and how to inspect.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DlpJob createDlpJob(ProjectName parent, InspectJobConfig inspectJob) {
@@ -2075,7 +2075,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param risk_job Set to choose what metric to calculate.
+   * @param riskJob Set to choose what metric to calculate.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DlpJob createDlpJob(ProjectName parent, RiskAnalysisJobConfig riskJob) {
@@ -2107,7 +2107,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param inspect_job Set to control what and how to inspect.
+   * @param inspectJob Set to control what and how to inspect.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DlpJob createDlpJob(String parent, InspectJobConfig inspectJob) {
@@ -2136,7 +2136,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     <p>The following example `parent` string specifies a parent project with the identifier
    *     `example-project`, and specifies the `europe-west3` location for processing data:
    *     <p>parent=projects/example-project/locations/europe-west3
-   * @param risk_job Set to choose what metric to calculate.
+   * @param riskJob Set to choose what metric to calculate.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final DlpJob createDlpJob(String parent, RiskAnalysisJobConfig riskJob) {
@@ -2626,7 +2626,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     projects/project-id/storedInfoTypes/432452342.
    * @param config Updated configuration for the storedInfoType. If not provided, a new version of
    *     the storedInfoType will be created with the existing configuration.
-   * @param update_mask Mask to control which fields get updated.
+   * @param updateMask Mask to control which fields get updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final StoredInfoType updateStoredInfoType(
@@ -2651,7 +2651,7 @@ public class DlpServiceClient implements BackgroundResource {
    *     projects/project-id/storedInfoTypes/432452342.
    * @param config Updated configuration for the storedInfoType. If not provided, a new version of
    *     the storedInfoType will be created with the existing configuration.
-   * @param update_mask Mask to control which fields get updated.
+   * @param updateMask Mask to control which fields get updated.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final StoredInfoType updateStoredInfoType(
