@@ -22,8 +22,6 @@ import com.google.api.pathtemplate.ValidationException;
 import com.google.api.resourcenames.ResourceName;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
@@ -258,26 +256,6 @@ public class DeidentifyTemplateName implements ResourceName {
     }
     throw new ValidationException(
         "DeidentifyTemplateName.parse: formattedString not in valid format");
-  }
-
-  public static List<DeidentifyTemplateName> parseList(List<String> formattedStrings) {
-    List<DeidentifyTemplateName> list = new ArrayList<>(formattedStrings.size());
-    for (String formattedString : formattedStrings) {
-      list.add(parse(formattedString));
-    }
-    return list;
-  }
-
-  public static List<String> toStringList(List<DeidentifyTemplateName> values) {
-    List<String> list = new ArrayList<>(values.size());
-    for (DeidentifyTemplateName value : values) {
-      if (value == null) {
-        list.add("");
-      } else {
-        list.add(value.toString());
-      }
-    }
-    return list;
   }
 
   public static boolean isParsableFrom(String formattedString) {

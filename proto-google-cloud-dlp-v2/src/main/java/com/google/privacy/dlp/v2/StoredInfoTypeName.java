@@ -22,8 +22,6 @@ import com.google.api.pathtemplate.ValidationException;
 import com.google.api.resourcenames.ResourceName;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableMap;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Generated;
@@ -245,26 +243,6 @@ public class StoredInfoTypeName implements ResourceName {
           matchMap.get("project"), matchMap.get("location"), matchMap.get("stored_info_type"));
     }
     throw new ValidationException("StoredInfoTypeName.parse: formattedString not in valid format");
-  }
-
-  public static List<StoredInfoTypeName> parseList(List<String> formattedStrings) {
-    List<StoredInfoTypeName> list = new ArrayList<>(formattedStrings.size());
-    for (String formattedString : formattedStrings) {
-      list.add(parse(formattedString));
-    }
-    return list;
-  }
-
-  public static List<String> toStringList(List<StoredInfoTypeName> values) {
-    List<String> list = new ArrayList<>(values.size());
-    for (StoredInfoTypeName value : values) {
-      if (value == null) {
-        list.add("");
-      } else {
-        list.add(value.toString());
-      }
-    }
-    return list;
   }
 
   public static boolean isParsableFrom(String formattedString) {
