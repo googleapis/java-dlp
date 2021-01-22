@@ -69,22 +69,27 @@ integration)
     RETURN_CODE=$?
     ;;
 samples)
-    if [[ -f samples/pom.xml ]]
+    SAMPLES_DIR=samples
+    # only run ITs in snapshot/ on presubmit PRs. run ITs in all 3 samples/ subdirectories otherwise.
+    if [[ ! -z ${KOKORO_GITHUB_PULL_REQUEST_NUMBER} ]]
     then
-        # TODO: load this better
-        if [ -f "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets" ]
-        then
-            source "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets"
-        fi
+      SAMPLES_DIR=samples/snapshot
+    fi
 
-        pushd samples
+    if [[ -f ${SAMPLES_DIR}/pom.xml ]]
+    then
+        for FILE in  `ls ${KOKORO_GFILE_DIR}/secret_manager/.*-samples-secrets`
+            do
+                source "${KOKORO_GFILE_DIR}/secret_manager/${FILE}"            
+            done
+        pushd ${SAMPLES_DIR}
         mvn -B \
-          -Penable-samples \
-          -DtrimStackTrace=false \
-          -Dclirr.skip=true \
-          -Denforcer.skip=true \
-          -fae \
-          verify
+            -Penable-samples \
+            -DtrimStackTrace=false \
+            -Dclirr.skip=true \
+            -Denforcer.skip=true \
+            -fae \
+            verify
         RETURN_CODE=$?
         popd
     else
@@ -110,7 +115,7 @@ bash .kokoro/coerce_logs.sh
 if [[ "${ENABLE_BUILD_COP}" == "true" ]]
 then
     chmod +x ${KOKORO_GFILE_DIR}/linux_amd64/buildcop
-    ${KOKORO_GFILE_DIR}/linux_amd64/buildcop -repo=googleapis/java-dlp
+    ${KOKORO_GFILE_DIR}/linux_amd64/buildcop -repo={{metadata['repo']['repo']}}
 fi
 
 echo "exiting with ${RETURN_CODE}"
