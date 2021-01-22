@@ -78,7 +78,7 @@ samples)
 
     if [[ -f ${SAMPLES_DIR}/pom.xml ]]
     then
-        for FILE in  `ls ${KOKORO_GFILE_DIR}/secret_manager/.*-samples-secrets`
+        for FILE in  `ls ${KOKORO_GFILE_DIR}/secret_manager/`
             do
                 source "${KOKORO_GFILE_DIR}/secret_manager/${FILE}"            
             done
