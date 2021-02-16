@@ -75,6 +75,7 @@ samples)
         if [ -f "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets" ]
         then
             source "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets"
+            echo "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets"
         fi
 
         pushd samples
