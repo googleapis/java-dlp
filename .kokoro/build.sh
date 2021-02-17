@@ -71,12 +71,19 @@ integration)
 samples)
     if [[ -f samples/pom.xml ]]
     then
-        # TODO: load this better
-        for FILE in  `ls ${KOKORO_GFILE_DIR}/secret_manager/*-samples-secrets`
+#        # TODO: load this better
+#        if [ -f "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets" ]
+#        then
+#            source "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets"
+#            echo "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets"
+#        fi
+
+        for FILE in  "${KOKORO_GFILE_DIR}/secret_manager"
             do
                 source "${KOKORO_GFILE_DIR}/secret_manager/${FILE}"
                 echo "${KOKORO_GFILE_DIR}/secret_manager/${FILE}"
             done
+
         pushd samples
         mvn -B \
           -Penable-samples \
