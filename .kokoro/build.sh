@@ -17,6 +17,7 @@ set -eo pipefail
 
 ## Get the directory of the build script
 scriptDir=$(realpath $(dirname "${BASH_SOURCE[0]}"))
+
 ## cd to the parent directory, i.e. the root of the git repo
 cd ${scriptDir}/..
 # include common functions
@@ -71,10 +72,9 @@ samples)
     if [[ -f samples/pom.xml ]]
     then
         # TODO: load this better
-        SERVICE=${PWD##*/}
-        for FILE in ${KOKORO_GFILE_DIR}/secret_manager/${SERVICE}-samples-secrets; do
+        for FILE in ${KOKORO_GFILE_DIR}/secret_manager/*-samples-secrets; do
           [[ -e "$FILE" ]] || break
-          source $FILE
+          source "$FILE"
         done
 
         pushd samples
