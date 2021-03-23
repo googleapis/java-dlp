@@ -73,7 +73,7 @@ samples)
     then
         # TODO: load this better
         for FILE in ${KOKORO_GFILE_DIR}/secret_manager/*-samples-secrets; do
-          [[ -e "$FILE" ]] || break
+          [[ -f "$FILE" ]] || continue
           source "$FILE"
         done
 
