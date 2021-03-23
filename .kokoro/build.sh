@@ -72,10 +72,11 @@ samples)
     if [[ -f samples/pom.xml ]]
     then
         # TODO: load this better
-        if [ -f "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets" ]
-        then
-            source "${KOKORO_GFILE_DIR}/secret_manager/java-dlp-samples-secrets"
-        fi
+        for FILE in ${KOKORO_GFILE_DIR}/secret_manager/*-samples-secrets; do
+          [[ -e "$FILE" ]] || break
+          source $FILE
+          echo $FILE
+        done
 
         pushd samples
         mvn -B \
