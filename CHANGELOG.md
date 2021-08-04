@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://www.github.com/googleapis/java-dlp/compare/v2.4.5...v2.5.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#597](https://www.github.com/googleapis/java-dlp/issues/597)) ([8752131](https://www.github.com/googleapis/java-dlp/commit/8752131e8f745358d026b041ded609f534288ba0))
+
 ### [2.4.5](https://www.github.com/googleapis/java-dlp/compare/v2.4.4...v2.4.5) (2021-07-06)
 
 
