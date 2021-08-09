@@ -220,7 +220,6 @@ public class DlpServiceClient implements BackgroundResource {
   public DlpServiceStub getStub() {
     return stub;
   }
-
   
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
