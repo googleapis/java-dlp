@@ -42,7 +42,7 @@ If you are using Maven without BOM, add this to your dependencies:
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-dlp</artifactId>
-  <version>3.0.2</version>
+  <version>3.0.3</version>
 </dependency>
 
 ```
@@ -63,9 +63,7 @@ implementation 'com.google.cloud:google-cloud-dlp:3.0.3'
 If you are using SBT, add this to your dependencies
 
 ```Scala
-
 libraryDependencies += "com.google.cloud" % "google-cloud-dlp" % "3.0.3"
-
 ```
 
 ## Authentication
