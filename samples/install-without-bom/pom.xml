@@ -29,14 +29,14 @@
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-dlp</artifactId>
-      <version>2.4.6</version>
+      <version>3.0.3</version>
     </dependency>
     <!-- [END dlp_install_without_bom] -->
 
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-pubsub</artifactId>
-      <version>1.114.0</version>
+      <version>1.114.2</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

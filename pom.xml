@@ -4,7 +4,7 @@
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-dlp-parent</artifactId>
   <packaging>pom</packaging>
-  <version>3.0.2-SNAPSHOT</version><!-- {x-version-update:google-cloud-dlp:current} -->
+  <version>3.0.4-SNAPSHOT</version><!-- {x-version-update:google-cloud-dlp:current} -->
   <name>Google Cloud DLP Parent</name>
   <url>https://github.com/googleapis/java-dlp</url>
   <description>
@@ -14,7 +14,7 @@
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-shared-config</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
   </parent>
 
   <developers>
@@ -61,23 +61,23 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-dlp-v2</artifactId>
-        <version>3.0.2-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-dlp-v2:current} -->
+        <version>3.0.4-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-dlp-v2:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-dlp-v2</artifactId>
-        <version>3.0.2-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-dlp-v2:current} -->
+        <version>3.0.4-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-dlp-v2:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-dlp</artifactId>
-        <version>3.0.2-SNAPSHOT</version><!-- {x-version-update:google-cloud-dlp:current} -->
+        <version>3.0.4-SNAPSHOT</version><!-- {x-version-update:google-cloud-dlp:current} -->
       </dependency>
 
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-shared-dependencies</artifactId>
-        <version>2.0.1</version>
+        <version>2.2.0</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
