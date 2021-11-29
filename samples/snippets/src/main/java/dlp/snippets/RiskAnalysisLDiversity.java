@@ -75,10 +75,7 @@ class RiskAnalysisLDiversity {
     dlpServiceSettingsBuilder
         .getDlpJobSettings()
         .setRetrySettings(
-            dlpServiceSettingsBuilder
-                .getDlpJobSettings()
-                .getRetrySettings()
-                .toBuilder()
+            dlpServiceSettingsBuilder.getDlpJobSettings().getRetrySettings().toBuilder()
                 .setTotalTimeout(Duration.ofSeconds(600))
                 .build());
     try (DlpServiceClient dlpServiceClient =

@@ -230,7 +230,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method CreateInspectTemplate, expected %s or %s",
+                  "Unrecognized response type %s for method CreateInspectTemplate, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   InspectTemplate.class.getName(),
                   Exception.class.getName())));
@@ -251,7 +252,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method UpdateInspectTemplate, expected %s or %s",
+                  "Unrecognized response type %s for method UpdateInspectTemplate, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   InspectTemplate.class.getName(),
                   Exception.class.getName())));
@@ -294,7 +296,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method ListInspectTemplates, expected %s or %s",
+                  "Unrecognized response type %s for method ListInspectTemplates, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   ListInspectTemplatesResponse.class.getName(),
                   Exception.class.getName())));
@@ -315,7 +318,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method DeleteInspectTemplate, expected %s or %s",
+                  "Unrecognized response type %s for method DeleteInspectTemplate, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   Empty.class.getName(),
                   Exception.class.getName())));
@@ -337,7 +341,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method CreateDeidentifyTemplate, expected %s or %s",
+                  "Unrecognized response type %s for method CreateDeidentifyTemplate, expected %s"
+                      + " or %s",
                   response == null ? "null" : response.getClass().getName(),
                   DeidentifyTemplate.class.getName(),
                   Exception.class.getName())));
@@ -359,7 +364,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method UpdateDeidentifyTemplate, expected %s or %s",
+                  "Unrecognized response type %s for method UpdateDeidentifyTemplate, expected %s"
+                      + " or %s",
                   response == null ? "null" : response.getClass().getName(),
                   DeidentifyTemplate.class.getName(),
                   Exception.class.getName())));
@@ -380,7 +386,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method GetDeidentifyTemplate, expected %s or %s",
+                  "Unrecognized response type %s for method GetDeidentifyTemplate, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   DeidentifyTemplate.class.getName(),
                   Exception.class.getName())));
@@ -402,7 +409,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method ListDeidentifyTemplates, expected %s or %s",
+                  "Unrecognized response type %s for method ListDeidentifyTemplates, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   ListDeidentifyTemplatesResponse.class.getName(),
                   Exception.class.getName())));
@@ -423,7 +431,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method DeleteDeidentifyTemplate, expected %s or %s",
+                  "Unrecognized response type %s for method DeleteDeidentifyTemplate, expected %s"
+                      + " or %s",
                   response == null ? "null" : response.getClass().getName(),
                   Empty.class.getName(),
                   Exception.class.getName())));
@@ -487,7 +496,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method HybridInspectJobTrigger, expected %s or %s",
+                  "Unrecognized response type %s for method HybridInspectJobTrigger, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   HybridInspectResponse.class.getName(),
                   Exception.class.getName())));
@@ -693,7 +703,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method CreateStoredInfoType, expected %s or %s",
+                  "Unrecognized response type %s for method CreateStoredInfoType, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   StoredInfoType.class.getName(),
                   Exception.class.getName())));
@@ -714,7 +725,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method UpdateStoredInfoType, expected %s or %s",
+                  "Unrecognized response type %s for method UpdateStoredInfoType, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   StoredInfoType.class.getName(),
                   Exception.class.getName())));
@@ -778,7 +790,8 @@ public class MockDlpServiceImpl extends DlpServiceImplBase {
       responseObserver.onError(
           new IllegalArgumentException(
               String.format(
-                  "Unrecognized response type %s for method DeleteStoredInfoType, expected %s or %s",
+                  "Unrecognized response type %s for method DeleteStoredInfoType, expected %s or"
+                      + " %s",
                   response == null ? "null" : response.getClass().getName(),
                   Empty.class.getName(),
                   Exception.class.getName())));
