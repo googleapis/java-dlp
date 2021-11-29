@@ -173,8 +173,7 @@ public final class DlpStorage {
   static {
     java.lang.String[] descriptorData = {
       "\n"
-          + "#google/privacy/dlp/v2/storage.proto\022\025g"
-          + "oogle.privacy.dlp.v2\032\031google/api/resource.proto\032\037google/protobuf/timestamp.proto\032\034google/api/annotations.proto\"\030\n"
+          + "#google/privacy/dlp/v2/storage.proto\022\025google.privacy.dlp.v2\032\031google/api/resource.proto\032\037google/protobuf/timestamp.proto\032\034google/api/annotations.proto\"\030\n"
           + "\010InfoType\022\014\n"
           + "\004name\030\001 \001(\t\"K\n\n"
           + "StoredType\022\014\n"
