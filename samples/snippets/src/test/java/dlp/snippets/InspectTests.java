@@ -98,16 +98,15 @@ public class InspectTests extends TestBase {
       // Keep trying to clean up
     }
   }
-  
- @Test
+
+  @Test
   public void testEnvVars() throws Exception {
     System.out.println(GCS_PATH);
     System.out.println(PUB_SUB_TOPIC);
     System.out.println("BIGQUERY_DATASET");
     System.out.println("BIGQUERY_TABLE");
-    
   }
-  
+
   @Test
   public void testInspectPhoneNumber() throws Exception {
     InspectString.inspectString(PROJECT_ID, "My phone number is (415) 555-0890");
@@ -140,7 +139,6 @@ public class InspectTests extends TestBase {
         "Some email addresses: gary@example.com, example@example.com",
         Arrays.asList("example@example.com"));
 
-    
     String output = bout.toString();
     assertThat(output).contains("gary@example.com");
     assertThat(output).doesNotContain("example@example.com");
