@@ -102,9 +102,8 @@ public class InspectTests extends TestBase {
   @Test
   public void testEnvVars() throws Exception {
     System.out.println(GCS_PATH);
-    System.out.println(PUB_SUB_TOPIC);
-    System.out.println("BIGQUERY_DATASET");
-    System.out.println("BIGQUERY_TABLE");
+    System.out.println(TOPIC_ID);
+    System.out.println(SUBSCRIPTION_ID);
   }
 
   @Test
