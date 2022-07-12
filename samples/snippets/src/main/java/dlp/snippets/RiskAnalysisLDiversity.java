@@ -52,7 +52,7 @@ import java.util.concurrent.TimeoutException;
 import java.util.stream.Collectors;
 import org.threeten.bp.Duration;
 
-class RiskAnalysisLDiversity {
+class RiskAnalysislDiversity {
 
   public static void main(String[] args) throws Exception {
     // TODO(developer): Replace these variables before running the sample.
@@ -61,10 +61,10 @@ class RiskAnalysisLDiversity {
     String tableId = "your-bigquery-table-id";
     String topicId = "pub-sub-topic";
     String subscriptionId = "pub-sub-subscription";
-    calculateLDiversity(projectId, datasetId, tableId, topicId, subscriptionId);
+    calculatelDiversity(projectId, datasetId, tableId, topicId, subscriptionId);
   }
 
-  public static void calculateLDiversity(
+  public static void calculatelDiversity(
       String projectId, String datasetId, String tableId, String topicId, String subscriptionId)
       throws ExecutionException, InterruptedException, IOException {
 

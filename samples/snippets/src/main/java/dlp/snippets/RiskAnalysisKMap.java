@@ -15,6 +15,7 @@
  */
 
 package dlp.snippets;
+
 // [START dlp_k_map]
 
 import com.google.api.core.SettableApiFuture;
@@ -50,7 +51,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.stream.Collectors;
 
-class RiskAnalysisKMap {
+class RiskAnalysiskMap {
 
   public static void main(String[] args) throws Exception {
     // TODO(developer): Replace these variables before running the sample.
@@ -59,10 +60,10 @@ class RiskAnalysisKMap {
     String tableId = "your-bigquery-table-id";
     String topicId = "pub-sub-topic";
     String subscriptionId = "pub-sub-subscription";
-    calculateKMap(projectId, datasetId, tableId, topicId, subscriptionId);
+    calculatekMap(projectId, datasetId, tableId, topicId, subscriptionId);
   }
 
-  public static void calculateKMap(
+  public static void calculatekMap(
       String projectId, String datasetId, String tableId, String topicId, String subscriptionId)
       throws ExecutionException, InterruptedException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created

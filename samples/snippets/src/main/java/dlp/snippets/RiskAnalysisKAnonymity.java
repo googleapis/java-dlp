@@ -49,7 +49,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.stream.Collectors;
 
-class RiskAnalysisKAnonymity {
+class RiskAnalysiskAnonymity {
 
   public static void main(String[] args) throws Exception {
     // TODO(developer): Replace these variables before running the sample.
@@ -58,10 +58,10 @@ class RiskAnalysisKAnonymity {
     String tableId = "your-bigquery-table-id";
     String topicId = "pub-sub-topic";
     String subscriptionId = "pub-sub-subscription";
-    calculateKAnonymity(projectId, datasetId, tableId, topicId, subscriptionId);
+    calculatekAnonymity(projectId, datasetId, tableId, topicId, subscriptionId);
   }
 
-  public static void calculateKAnonymity(
+  public static void calculatekAnonymity(
       String projectId, String datasetId, String tableId, String topicId, String subscriptionId)
       throws ExecutionException, InterruptedException, IOException {
     // Initialize client that will be used to send requests. This client only needs to be created
