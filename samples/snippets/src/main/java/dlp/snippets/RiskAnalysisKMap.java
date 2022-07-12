@@ -15,6 +15,7 @@
  */
 
 package dlp.snippets;
+
 // [START dlp_k_map]
 
 import com.google.api.core.SettableApiFuture;
