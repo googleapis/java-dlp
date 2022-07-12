@@ -108,7 +108,7 @@ public class RiskAnalysisTests extends TestBase {
 
   @Test
   public void testKAnonymity() throws Exception {
-    RiskAnalysisKAnonymity.calculateKAnonymity(
+    RiskAnalysiskAnonymity.calculatekAnonymity(
         PROJECT_ID, DATASET_ID, TABLE_ID, topicName.getTopic(), subscriptionName.getSubscription());
     String output = bout.toString();
     assertThat(output).containsMatch("Bucket size range: \\[\\d, \\d\\]");
@@ -118,7 +118,7 @@ public class RiskAnalysisTests extends TestBase {
 
   @Test
   public void testLDiversity() throws Exception {
-    RiskAnalysisLDiversity.calculateLDiversity(
+    RiskAnalysislDiversity.calculatelDiversity(
         PROJECT_ID, DATASET_ID, TABLE_ID, topicName.getTopic(), subscriptionName.getSubscription());
     String output = bout.toString();
     assertThat(output).contains("Quasi-ID values: integer_value: 19");
@@ -128,7 +128,7 @@ public class RiskAnalysisTests extends TestBase {
 
   @Test
   public void testKMap() throws Exception {
-    RiskAnalysisKMap.calculateKMap(
+    RiskAnalysiskMap.calculatekMap(
         PROJECT_ID, DATASET_ID, TABLE_ID, topicName.getTopic(), subscriptionName.getSubscription());
 
     String output = bout.toString();
