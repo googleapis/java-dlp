@@ -28,14 +28,14 @@
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-dlp</artifactId>
-      <version>3.6.4-SNAPSHOT</version>
+      <version>3.6.7-SNAPSHOT</version>
     </dependency>
     <!-- {x-version-update-end} -->
 
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-pubsub</artifactId>
-      <version>1.120.3</version>
+      <version>1.120.10</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
