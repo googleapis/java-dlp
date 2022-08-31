@@ -276,7 +276,7 @@ public class DeIdentificationTests extends TestBase {
                     .addValues(
                         Value.newBuilder()
                             .setStringValue(
-                                "Charles Dickens name was a curse invented by Shakespeare.")
+                                "Charles Dickens name was a curse invented by adieu.")
                             .build())
                     .build())
             .addRows(
