@@ -275,8 +275,7 @@ public class DeIdentificationTests extends TestBase {
                     .addValues(Value.newBuilder().setStringValue("95").build())
                     .addValues(
                         Value.newBuilder()
-                            .setStringValue(
-                                "Charles Dickens name was a curse invented by a bard.")
+                            .setStringValue("Charles Dickens name was a curse invented by a bard.")
                             .build())
                     .build())
             .addRows(
@@ -310,8 +309,7 @@ public class DeIdentificationTests extends TestBase {
                     .addValues(Value.newBuilder().setStringValue("95").build())
                     .addValues(
                         Value.newBuilder()
-                            .setStringValue(
-                                "[PERSON_NAME] name was a curse invented by a bard.")
+                            .setStringValue("[PERSON_NAME] name was a curse invented by a bard.")
                             .build())
                     .build())
             .addRows(
@@ -411,8 +409,7 @@ public class DeIdentificationTests extends TestBase {
                     .addValues(Value.newBuilder().setStringValue("95").build())
                     .addValues(
                         Value.newBuilder()
-                            .setStringValue(
-                                "Charles Dickens name was a curse invented by a bard.")
+                            .setStringValue("Charles Dickens name was a curse invented by a bard.")
                             .build())
                     .build())
             .addRows(
@@ -446,8 +443,7 @@ public class DeIdentificationTests extends TestBase {
                     .addValues(Value.newBuilder().setStringValue("95").build())
                     .addValues(
                         Value.newBuilder()
-                            .setStringValue(
-                                "[PERSON_NAME] name was a curse invented by a bard.")
+                            .setStringValue("[PERSON_NAME] name was a curse invented by a bard.")
                             .build())
                     .build())
             .addRows(
