@@ -276,7 +276,7 @@ public class DeIdentificationTests extends TestBase {
                     .addValues(
                         Value.newBuilder()
                             .setStringValue(
-                                "Charles Dickens name was a curse invented by adieu.")
+                                "Charles Dickens name was a curse invented by a bard.")
                             .build())
                     .build())
             .addRows(
@@ -311,7 +311,7 @@ public class DeIdentificationTests extends TestBase {
                     .addValues(
                         Value.newBuilder()
                             .setStringValue(
-                                "[PERSON_NAME] name was a curse invented by [PERSON_NAME].")
+                                "[PERSON_NAME] name was a curse invented by a bard.")
                             .build())
                     .build())
             .addRows(
@@ -412,7 +412,7 @@ public class DeIdentificationTests extends TestBase {
                     .addValues(
                         Value.newBuilder()
                             .setStringValue(
-                                "Charles Dickens name was a curse invented by Shakespeare.")
+                                "Charles Dickens name was a curse invented by a bard.")
                             .build())
                     .build())
             .addRows(
@@ -447,7 +447,7 @@ public class DeIdentificationTests extends TestBase {
                     .addValues(
                         Value.newBuilder()
                             .setStringValue(
-                                "[PERSON_NAME] name was a curse invented by [PERSON_NAME].")
+                                "[PERSON_NAME] name was a curse invented by a bard.")
                             .build())
                     .build())
             .addRows(
