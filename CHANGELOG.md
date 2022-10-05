@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.7.5](https://github.com/googleapis/java-dlp/compare/v3.7.4...v3.7.5) (2022-10-03)
+
+
+### Bug Fixes
+
+* deprecate extra field to avoid confusion ([f5ee046](https://github.com/googleapis/java-dlp/commit/f5ee046bdc40c60d2b3683c63d200532dfd2850d))
+
 ## [3.7.4](https://github.com/googleapis/java-dlp/compare/v3.7.3...v3.7.4) (2022-10-03)
 
 
