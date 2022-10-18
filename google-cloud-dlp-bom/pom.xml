@@ -52,7 +52,7 @@
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-dlp</artifactId>
-        <version>3.8.0</version><!-- {x-version-update:google-cloud-dlp:current} -->
+        <version>3.7.7-SNAPSHOT</version><!-- {x-version-update:google-cloud-dlp:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
