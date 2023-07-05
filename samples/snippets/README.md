@@ -1,1 +1,0 @@
-The samples have been moved to [GoogleCloudPlatform/java-docs-samples](https://github.com/GoogleCloudPlatform/java-docs-samples) in PR: https://github.com/GoogleCloudPlatform/java-docs-samples/pull/7664
